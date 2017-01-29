@@ -1,0 +1,61 @@
+
+<div class="separador"></div>
+<div class="columns small-12">
+	<!-- Slider main container -->
+	<div class="swiper-container">
+	    <!-- Additional required wrapper -->
+	    <div class="parallax-bg" style="background-image:url(public/images/home-banner.jpg)" data-swiper-parallax="-23%"></div>
+	    <div class="swiper-wrapper">
+	        <!-- Slides -->
+	        <div class="swiper-slide">
+	        	<div class="texto-banner">“Cheers to your vanity”</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="texto-banner">“Cheers to your vanity” 2</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="texto-banner">“Cheers to your vanity” 3</div>
+	        </div>
+	    </div>
+	    <!-- If we need pagination -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- If we need navigation buttons -->
+	    <div class="swiper-button-prev">ss</div>
+	    <div class="swiper-button-next">ss</div>
+	    
+	    <!-- If we need scrollbar -->
+	    <div class="swiper-scrollbar"></div>
+	</div>
+
+</div>
+<style>
+.swiper-container {
+    width: 100%;
+    height: 500px;
+}
+.parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+ }
+</style>
+<script>        
+  $(document).ready(function () {
+    //initialize swiper when document ready  
+      var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        autoplay: 2000,
+        speed: 600
+    });   
+  });   
+  </script>

@@ -1,0 +1,17 @@
+{% extends "main.twig" %}
+
+{% block title %}Barniz - Home{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block header %}
+	{{ include ('include/header.twig') }}
+{% endblock %}
+
+
+{% block content %}
+	{{ include ('include/svg.twig') }}
+{% endblock %}
