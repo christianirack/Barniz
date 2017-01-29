@@ -7084,12 +7084,23 @@ body {
   height: 40px;
 }
 
+.separador2 {
+  width: 100%;
+  height: 60px;
+}
+
 .fuente1 {
   font-family: 'Nunito Sans', sans-serif;
 }
 
 .fuente2 {
   font-family: 'Julius Sans One', sans-serif;
+}
+
+h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3em;
+  color: #27252e;
 }
 
 .menu-texto {
@@ -7116,13 +7127,34 @@ body {
   margin-top: 200px;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 500px;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-parallax1 {
+  background: url("../images/home-parallax1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 500px;
+}
+
 @media only screen and (max-width: 40em) {
   .swiper-container {
     height: 300px !important;
   }
 
   .texto-banner {
-    font-size: 2em;
+    font-size: 4em;
     width: 75%;
     margin: 0px auto;
     text-align: center;

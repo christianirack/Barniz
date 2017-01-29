@@ -1,7 +1,8 @@
 $size1 :  1em;
 $size2 :  1.5em;
 $size3 :  2em;
-$size4 :  4em;
+$size4 :  3em;
+$size5 :  4em;
 $colorNaranja: #dd800b;
 $colorMorado : #27252e;
 $colorBlanco: #fff;
@@ -24,6 +25,10 @@ html, body{
 	width: 100%;
 	height: 40px;
 }
+.separador2{
+	width: 100%;
+	height: 60px;
+}
 //////////////////////////////////// MIXINS
 @mixin fuente1(){
 	font-family: 'Nunito Sans', sans-serif;
@@ -38,7 +43,11 @@ html, body{
 .fuente2{
 	@include fuente2();
 }
-
+h1{
+	@include fuente2();
+	font-size: $size4;
+	color:$colorMorado;	
+}
 .menu-texto{
 	@include fuente1();
 	font-size: $size2;
@@ -53,12 +62,36 @@ html, body{
 .texto-banner{
 	@include fuente2();
 	color:$colorBlanco;
-	font-size: $size4;
+	font-size: $size5;
 	font-weight: lighter;
 	margin: 0px auto;
 	text-align: center;
 	margin-top: 200px;
 }
+////////////////////////////////////BANNER HOME
+
+.swiper-container {
+    width: 100%;
+    height: 500px;
+}
+.parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+ }
+////////////////////////////////////HOME PARALLAX
+.home-parallax1{
+	background: url(../images/home-parallax1.jpg) no-repeat center center fixed;
+ 	background-size: cover;
+ 	height: 500px;
+}
+
+
 ////////////////////////////////////MEDIA QUERIES
 //////////////////SMALL
 @media only screen and (max-width: 40em) {
@@ -66,7 +99,7 @@ html, body{
 		    height: 300px !important;
 	}
 	.texto-banner{
-		font-size: $size3;
+		font-size: $size5;
 		width: 75%;
 		margin: 0px auto;
 		text-align: center;
