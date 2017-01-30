@@ -1,24 +1,34 @@
 /*----------  Target animados  ----------*/
 .mascara1{
 	//gris
-	background-color: $colorNaranja;
+	//background-color: $colorNaranja;
 	left: 0%;
 }
 .mascara2{
 	//azul
+	//background-color: $colorNaranja;
+	background: linear-gradient(to right, rgba(230,161,74,0) 0%,rgba(230,161,74,1) 65%,rgba(230,161,74,1) 100%);
+	//border-bottom:1px dashed $colorNaranja;
+	left:34%;
+}
+.mascara3{
+	//azul
 	background-color: $colorBlanco;
-	left:50%;
+	
+	//background-color: $colorBlanco;
+	//border-bottom:9px solid $colorNaranja;
+	left:68%;
 }
 .mascara{
-	width: 50%;
+	width: 34%;
 	height: 100%;
 	position: absolute;
 }
 .mascara-cont{
 	position: absolute;
-	width: 200%;
+	width: 320%;
 	height: 100%;
-	left: -100%;
+	left: -220%;
 }
 [target]{
 	position: relative;

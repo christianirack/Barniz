@@ -7,17 +7,17 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ APPPATH }}public/css/bundle.css?c={{ random() }}" type="text/css" />
     <script type="text/javascript" src="{{ APPPATH }}public/js/bundle.js?c={{ random() }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
     {% endblock %}
 </head>
 
 <body>
-        <div id="menu-sticky">
-             {% block menu %} {{ include ('include/menu.twig') }} {% endblock %} 
-        </div>
+    <div id="menu-sticky">
+         {% block menu %} {{ include ('include/menu.twig') }} {% endblock %} 
+    </div>
     <div id="vbody">
         
         <div class="row expanded small-uncollapse">
-            
             {% block header %}  {% endblock %} 
             {% block content %}  {% endblock %} 
             {% block footer %}  {% endblock %}

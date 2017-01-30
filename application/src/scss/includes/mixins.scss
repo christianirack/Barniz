@@ -1,0 +1,53 @@
+@mixin fuente1(){
+	font-family: 'Nunito Sans', sans-serif;
+}
+@mixin fuente2(){
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+
+@mixin parallaxSmall{
+	#parallax1{
+		width: 100%;
+		height: 200px !important;
+	}
+	#parallax2{
+		width: 100%;
+		height: 420px !important;
+	}
+	#parallax3{
+		width: 100%;
+		height: 200px !important;
+	}
+	#parallax1-img{
+		background: url(../m.images/home-mujer.jpg?c=2) no-repeat center center;
+	
+	}
+	#parallax2-img{
+		background: url(../m.images/home-liquido.png?c=2) no-repeat center center;
+	}
+	#parallax3-img{
+		background: url(../m.images/home-cafe.jpg?c=2) no-repeat center center;
+	
+	}
+	.parallax-bg{
+		background:url(../m.images/home-banner.jpg);
+	}
+}
+
+@mixin parallaxMedium{
+	#parallax1-img{
+		background: url(../images/home-mujer.jpg?c=2) no-repeat center center;
+	
+	}
+	#parallax2-img{
+		background: url(../images/home-liquido.png?c=2) no-repeat center center;
+	}
+	#parallax3-img{
+		background: url(../images/home-cafe.jpg?c=2) no-repeat center center;
+	
+	}
+	.parallax-bg{
+		background:url(../images/home-banner.jpg);
+	}
+}

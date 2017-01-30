@@ -1,5 +1,17 @@
 /*----------  Small  ----------*/
 @media only screen and (max-width: 40em) {
+
+	
+	html,body,div{
+
+		 verflow-y: scroll; /* has to be scroll, not auto */
+  		 -webkit-overflow-scrolling: touch;
+  		-webkit-tap-highlight-color: rgba(0,0,0,0);
+  		-webkit-tap-highlight-color: transparent; /* For some Androids */
+	}
+
+
+
 	.swiper-container {
 		    height: 300px !important;
 	}
@@ -10,14 +22,52 @@
 		text-align: center;
 		margin-top: 100px;
 	}
+	.svg-elemento{
+		width:60% !important;
+		padding: 30px !important;
+	}
+
+	.texto-banner{
+			font-size: $size3;
+	}
+	/*----------  Menu pegajoso  ----------*/
+	#menu-sticky{
+		position: fixed;
+		left:0px;
+		top:0px;
+		position: device-fixed;
+
+	}
+	.separador{
+		height: 20px !important;
+	}
+	.separador-movil{
+		height: 0px !important;
+	}
+	#sombra-emulada{
+		opacity:1 !important;
+		background-size: 100% auto;
+		background-position: top center;
+	}
+	/*----------  Parallax Small  ----------*/
+	@include parallaxSmall;
+
  } 
 /*----------  Medium  ----------*/
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+//@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) {
+	.texto-banner{
+			font-size: $size5;
+			margin-top: 200px;
+	}	
+	@include parallaxMedium;
 
 } 
 /*----------  Large  ----------*/
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+//@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 64.063em){
  } 
 /*----------  XL  ----------*/
 @media only screen and (min-width: 90.063em) {
+
 } 

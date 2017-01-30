@@ -1,11 +1,9 @@
 .texto-banner{
 	@include fuente2();
 	color:$colorBlanco;
-	font-size: $size5;
 	font-weight: lighter;
 	margin: 0px auto;
 	text-align: center;
-	margin-top: 200px;
 }
 .swiper-container {
     width: 100%;

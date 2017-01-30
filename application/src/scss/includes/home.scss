@@ -1,9 +1,4 @@
-@mixin fuente1(){
-	font-family: 'Nunito Sans', sans-serif;
-}
-@mixin fuente2(){
-	font-family: 'Julius Sans One', sans-serif;
-}
+
 //////////////////////////////////// CÓDIGO FUENTE HOME
 .fuente1{
 	@include fuente1();

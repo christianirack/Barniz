@@ -1,9 +1,17 @@
-*, *:before, *:after {
-  box-sizing: border-box; }
-
+@charset "UTF-8";
 .debug {
   color: #fa00d4;
   opacity: .3; }
+  .debug:before {
+    content: '' !important; }
+
+/* Texto */
+/* Menú texto y H3, Menú membresias */
+/* H2  */
+/* H1 */
+/* banner */
+*, *:before, *:after {
+  box-sizing: border-box; }
 
 html, body {
   font-size: 12px; }
@@ -25,7 +33,7 @@ html, body {
   width: 100%;
   height: 40px; }
   .separador:before {
-    content: '[separador 1]--------->'; }
+    content: '[separador]--------->'; }
 
 .separador2 {
   width: 100%;
@@ -33,31 +41,44 @@ html, body {
   .separador2:before {
     content: '[separador 2]--------->'; }
 
+.separador3 {
+  width: 100%;
+  height: 80px; }
+  .separador3:before {
+    content: '[separador 3]--------->'; }
+
 .aire {
   width: 100%;
   height: 3000px; }
   .aire:before {
     content: '[aire]--------->'; }
 
+.texto {
+  font-size: 1.2em; }
+
 /*----------  Target animados  ----------*/
 .mascara1 {
-  background-color: #db7d0a;
   left: 0%; }
 
 .mascara2 {
+  background: -webkit-linear-gradient(left, rgba(230, 161, 74, 0) 0%, #e6a14a 65%, #e6a14a 100%);
+  background: linear-gradient(to right, rgba(230, 161, 74, 0) 0%, #e6a14a 65%, #e6a14a 100%);
+  left: 34%; }
+
+.mascara3 {
   background-color: white;
-  left: 50%; }
+  left: 68%; }
 
 .mascara {
-  width: 50%;
+  width: 34%;
   height: 100%;
   position: absolute; }
 
 .mascara-cont {
   position: absolute;
-  width: 200%;
+  width: 320%;
   height: 100%;
-  left: -100%; }
+  left: -220%; }
 
 [target] {
   position: relative;
@@ -97,11 +118,9 @@ h3 {
 .texto-banner {
   font-family: 'Julius Sans One', sans-serif;
   color: white;
-  font-size: 4em;
   font-weight: lighter;
   margin: 0px auto;
-  text-align: center;
-  margin-top: 200px; }
+  text-align: center; }
 
 .swiper-container {
   width: 100%;
@@ -119,7 +138,8 @@ h3 {
 /*----------  Menu sticky  ----------*/
 #menu-sticky {
   position: relative;
-  z-index: 999999 !important; }
+  z-index: 999999 !important;
+  width: 100% !important; }
 
 #menu-contenedor {
   width: 100%; }
@@ -127,7 +147,7 @@ h3 {
 #sombra-emulada {
   width: 100%;
   height: 40px;
-  background: url(../images/sombra.png?c=2) no-repeat center center;
+  background: url(../images/sombra.png?c=2) no-repeat top center;
   opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
@@ -139,14 +159,17 @@ h3 {
 .active {
   border-bottom: 2px solid #db7d0a; }
 
-/*----------  Parallax  ----------*/
+#svg1-icon g path {
+  stroke: none;
+  fill: #E8AA5C; }
+
+/*----------  Parallax [ 1 ] ----------*/
 #parallax1 {
   width: 100%;
   height: 500px;
   z-index: 99918 !important; }
 
 #parallax1-img {
-  background: url(../images/home-parallax1.jpg) no-repeat center center;
   background-size: 100% auto; }
 
 .parallaxParent {
@@ -160,13 +183,13 @@ h3 {
   position: relative;
   top: -100%; }
 
+/*----------  Parallax [ 2 ]  ----------*/
 #parallax2 {
   width: 100%;
   height: 400px;
   z-index: 99919 !important; }
 
 #parallax2-img {
-  background: url(../images/home-liquido.png?c=1) no-repeat center center;
   background-size: 100% auto; }
 
 .parallaxParent2 {
@@ -178,6 +201,11 @@ h3 {
   position: relative;
   top: -100%; }
 
+.home-liquido-menu {
+  width: 50%;
+  min-width: 200px;
+  margin: 0px auto; }
+
 .cuadro-liquido {
   width: 70%;
   height: 300px;
@@ -187,18 +215,28 @@ h3 {
   left: 15%; }
   .cuadro-liquido h1, .cuadro-liquido h3 {
     color: rgba(255, 255, 255, 0.8); }
+  .cuadro-liquido .home-liquido-subtitulo {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #db7d0a; }
 
+/*----------  Parallax [ 3 ]  ----------*/
 #parallax3 {
   width: 100%;
   height: 500px;
   z-index: 99917 !important; }
 
 #parallax3-img {
-  background: url(../images/home-cafe.jpg) no-repeat center center;
   background-size: 100% auto; }
 
 /*----------  Small  ----------*/
 @media only screen and (max-width: 40em) {
+  html, body, div {
+    verflow-y: scroll;
+    /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    /* For some Androids */ }
   .swiper-container {
     height: 300px !important; }
   .texto-banner {
@@ -206,8 +244,58 @@ h3 {
     width: 75%;
     margin: 0px auto;
     text-align: center;
-    margin-top: 100px; } }
+    margin-top: 100px; }
+  .svg-elemento {
+    width: 60% !important;
+    padding: 30px !important; }
+  .texto-banner {
+    font-size: 2em; }
+  /*----------  Menu pegajoso  ----------*/
+  #menu-sticky {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    position: device-fixed; }
+  .separador {
+    height: 20px !important; }
+  .separador-movil {
+    height: 0px !important; }
+  #sombra-emulada {
+    opacity: 1 !important;
+    background-size: 100% auto;
+    background-position: top center; }
+  /*----------  Parallax Small  ----------*/
+  #parallax1 {
+    width: 100%;
+    height: 200px !important; }
+  #parallax2 {
+    width: 100%;
+    height: 420px !important; }
+  #parallax3 {
+    width: 100%;
+    height: 200px !important; }
+  #parallax1-img {
+    background: url(../m.images/home-mujer.jpg?c=2) no-repeat center center; }
+  #parallax2-img {
+    background: url(../m.images/home-liquido.png?c=2) no-repeat center center; }
+  #parallax3-img {
+    background: url(../m.images/home-cafe.jpg?c=2) no-repeat center center; }
+  .parallax-bg {
+    background: url(../m.images/home-banner.jpg); } }
 
 /*----------  Medium  ----------*/
+@media only screen and (min-width: 40.063em) {
+  .texto-banner {
+    font-size: 4em;
+    margin-top: 200px; }
+  #parallax1-img {
+    background: url(../images/home-mujer.jpg?c=2) no-repeat center center; }
+  #parallax2-img {
+    background: url(../images/home-liquido.png?c=2) no-repeat center center; }
+  #parallax3-img {
+    background: url(../images/home-cafe.jpg?c=2) no-repeat center center; }
+  .parallax-bg {
+    background: url(../images/home-banner.jpg); } }
+
 /*----------  Large  ----------*/
 /*----------  XL  ----------*/

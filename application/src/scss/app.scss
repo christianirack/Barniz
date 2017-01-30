@@ -1,7 +1,15 @@
 div{
 	//outline: 1px solid red;
 }
+.debug{
+	color:hsla(309, 100%, 49%, 1);
+	opacity:.3;
+	&:before{
+		content:'' !important;
+	}
+}
 @import 'includes/variables.scss';
+@import 'includes/mixins.scss';
 @import 'includes/general.scss';
 @import 'includes/target.scss';
 @import 'includes/home.scss';
