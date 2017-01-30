@@ -1,121 +1,18 @@
-$size1 :  1em;
-$size2 :  1.5em;
-$size3 :  2em;
-$size4 :  3em;
-$size5 :  4em;
-$colorNaranja: #dd800b;
-$colorMorado : #27252e;
-$colorBlanco: #fff;
-//////////////////////////////////// PROPIEDADES GENERALES
 div{
 	//outline: 1px solid red;
-	
 }
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-html, body{
-	font-size: 12px;
-}
-#vbody{
-	max-width: 1200px;
-	margin: 0px auto;
-}
-.separador{
-	width: 100%;
-	height: 40px;
-}
-.separador2{
-	width: 100%;
-	height: 60px;
-}
-//////////////////////////////////// MIXINS
-@mixin fuente1(){
-	font-family: 'Nunito Sans', sans-serif;
-}
-@mixin fuente2(){
-	font-family: 'Julius Sans One', sans-serif;
-}
-//////////////////////////////////// CÓDIGO FUENTE HOME
-.fuente1{
-	@include fuente1();
-}
-.fuente2{
-	@include fuente2();
-}
-h1{
-	@include fuente2();
-	font-size: $size4;
-	color:$colorMorado;	
-}
-.menu-texto{
-	@include fuente1();
-	font-size: $size2;
-	color:$colorMorado;
-	a{
-		color: inherit;
-	}
-}
-.menu-texto-contenedor{
-	margin: 10åpx;
-}
-.texto-banner{
-	@include fuente2();
-	color:$colorBlanco;
-	font-size: $size5;
-	font-weight: lighter;
-	margin: 0px auto;
-	text-align: center;
-	margin-top: 200px;
-}
-////////////////////////////////////BANNER HOME
-
-.swiper-container {
-    width: 100%;
-    height: 500px;
-}
-.parallax-bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 130%;
-        height: 100%;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
- }
-////////////////////////////////////HOME PARALLAX
-.home-parallax1{
-	background: url(../images/home-parallax1.jpg) no-repeat center center fixed;
- 	background-size: cover;
- 	height: 500px;
-}
+@import 'includes/variables.scss';
+@import 'includes/general.scss';
+@import 'includes/target.scss';
+@import 'includes/home.scss';
+@import 'includes/banner.scss';
+@import 'includes/menu.scss';
+@import 'includes/parallax.scss';
+@import 'includes/responsive.scss';
 
 
-////////////////////////////////////MEDIA QUERIES
-//////////////////SMALL
-@media only screen and (max-width: 40em) {
-	.swiper-container {
-		    height: 300px !important;
-	}
-	.texto-banner{
-		font-size: $size5;
-		width: 75%;
-		margin: 0px auto;
-		text-align: center;
-		margin-top: 100px;
-	}
- } 
-///////////////////MEDIUM
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
-} 
-/////////////////////LARGE
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
- } 
-//////////////////////XX LARGE
-@media only screen and (min-width: 90.063em) {
-} 
+
 
 
 

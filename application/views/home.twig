@@ -1,4 +1,4 @@
-{% extends "main.twig" %}
+{% extends "template-body.twig" %}
 
 {% block title %}Barniz - Home{% endblock %}
 
@@ -8,12 +8,13 @@
 
 
 {% block header %}
-	{{ include ('include/header.twig') }}
+	{{ include ('include/home-banner.twig') }}
 {% endblock %}
 
 
 {% block content %}
-
 	{{ include ('include/home-nosotros.twig') }}
 	{{ include ('include/home-parallax1.twig') }}
+	{{ include ('include/home-liquido.twig') }}
+	{{ include ('include/home-cafe.twig') }}
 {% endblock %}

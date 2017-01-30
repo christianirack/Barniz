@@ -1,0 +1,70 @@
+/*----------  Parallax  ----------*/
+	#parallax1{
+		width: 100%;
+		height: 500px;
+		z-index: 99918 !important;
+	}
+	#parallax1-img{
+		background: url(../images/home-parallax1.jpg) no-repeat center center;
+		background-size: 100% auto;
+	
+	}
+	.parallaxParent {
+		height: 100vh;
+		
+	}
+	.parallaxParentOverFlow {
+			overflow: hidden;
+	}
+	.parallaxParent > * {
+		height: 200%;
+		position: relative;
+		top: -100%;
+	}
+	//////////
+	#parallax2{
+		width: 100%;
+		height:400px;
+		z-index: 99919 !important;
+
+	}
+	#parallax2-img{
+		background: url(../images/home-liquido.png?c=1) no-repeat center center;
+		background-size: 100% auto;
+	
+	}
+	.parallaxParent2 {
+		height: 100vh;
+		position:relative;
+		
+	}
+	.parallaxParent2 > * {
+		height: 230%;
+		position: relative;
+		top: -100%;
+	}
+
+	.cuadro-liquido{
+		width:70%;
+		height:300px;
+		background-color:$colorMoradoTrans;
+		position:absolute;
+		top:0px;
+		left:15%;
+		h1,h3{
+			color: $colorBlancoTrans;
+		}
+
+	}
+	////////////
+	#parallax3{
+		width: 100%;
+		height: 500px;
+		z-index: 99917 !important;
+	}
+	#parallax3-img{
+		background: url(../images/home-cafe.jpg) no-repeat center center;
+		background-size: 100% auto;
+	
+	}
+

@@ -1,0 +1,39 @@
+@mixin fuente1(){
+	font-family: 'Nunito Sans', sans-serif;
+}
+@mixin fuente2(){
+	font-family: 'Julius Sans One', sans-serif;
+}
+//////////////////////////////////// CÓDIGO FUENTE HOME
+.fuente1{
+	@include fuente1();
+}
+.fuente2{
+	@include fuente2();
+}
+h1{
+	@include fuente2();
+	font-size: $size4;
+	color:$colorMorado;	
+}
+h2{
+	@include fuente2();
+	font-size: $size3;
+	color:$colorMorado;	
+}
+h3{
+	@include fuente2();
+	font-size: $size2;
+	color:$colorMorado;	
+}
+.menu-texto{
+	@include fuente1();
+	font-size: $size2;
+	color:$colorMorado;
+	a{
+		color: inherit;
+	}
+}
+.menu-texto-contenedor{
+	margin: 10px;
+}

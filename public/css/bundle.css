@@ -223,12 +223,14 @@
 /* Bullets */
 
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   border-radius: 100%;
   background: #000;
   opacity: 0.2;
+  padding: 10px;
+  border: 1px solid #dd800b;
 }
 
 button.swiper-pagination-bullet {
@@ -582,7 +584,7 @@ button.swiper-pagination-bullet {
   border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
-  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(0, 0, 0, 0.1); */
 }
 
 .swiper-container-horizontal > .swiper-scrollbar {
@@ -662,6 +664,115 @@ button.swiper-pagination-bullet {
   100% {
     transform: rotate(360deg);
   }
+}
+/* latin-ext */
+
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Julius Sans One'), local('JuliusSansOne-Regular'), url("https://fonts.gstatic.com/s/juliussansone/v5/iU65JP9acQHPDLkdalCF7pQnCV4ii-F0S-GDf6mWM7Q.woff2") format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Julius Sans One'), local('JuliusSansOne-Regular'), url("https://fonts.gstatic.com/s/juliussansone/v5/iU65JP9acQHPDLkdalCF7pbhOpL-vLTkIjCTuVYsuO0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* vietnamese */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url("https://fonts.gstatic.com/s/nunitosans/v2/iJ4p9wO0GDKJ-D5teKuZqtDiNsR5a-9Oe_Ivpu8XWlY.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url("https://fonts.gstatic.com/s/nunitosans/v2/iJ4p9wO0GDKJ-D5teKuZqqE8kM4xWR1_1bYURRojRGc.woff2") format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url("https://fonts.gstatic.com/s/nunitosans/v2/iJ4p9wO0GDKJ-D5teKuZqogp9Q8gbYrhqGlRav_IXfk.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* vietnamese */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'), url("https://fonts.gstatic.com/s/nunitosans/v2/XvilrNtBQKRMeiqSPzEFHcbIQSYZnWLaWC9QNCpTK_U.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'), url("https://fonts.gstatic.com/s/nunitosans/v2/XvilrNtBQKRMeiqSPzEFHYgd9OEPUCN3AdYW0e8tat4.woff2") format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'), url("https://fonts.gstatic.com/s/nunitosans/v2/XvilrNtBQKRMeiqSPzEFHf79_ZuUxCigM2DespTnFaw.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* vietnamese */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Nunito Sans Black'), local('NunitoSans-Black'), url("https://fonts.gstatic.com/s/nunitosans/v2/XvilrNtBQKRMeiqSPzEFHdkCwkpldbx59c_XQi58xAU.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Nunito Sans Black'), local('NunitoSans-Black'), url("https://fonts.gstatic.com/s/nunitosans/v2/XvilrNtBQKRMeiqSPzEFHaUGPFprm-fFLtay7gp3c_w.woff2") format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Nunito Sans Black'), local('NunitoSans-Black'), url("https://fonts.gstatic.com/s/nunitosans/v2/XvilrNtBQKRMeiqSPzEFHc1leddCan1b-yebX5Ypz_4.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @charset "UTF-8";
 
@@ -7061,12 +7172,15 @@ a.thumbnail image {
 .long-delay {
   animation-delay: 700ms !important;
 }
-@charset "UTF-8";
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+.debug {
+  color: #fa00d4;
+  opacity: .3;
 }
 
 html,
@@ -7077,6 +7191,16 @@ body {
 #vbody {
   max-width: 1200px;
   margin: 0px auto;
+  padding: 0px;
+  border: 0px;
+}
+
+#menu {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px;
+  border: 0px;
+  background-color: white;
 }
 
 .separador {
@@ -7084,9 +7208,56 @@ body {
   height: 40px;
 }
 
+.separador:before {
+  content: '[separador 1]--------->';
+}
+
 .separador2 {
   width: 100%;
   height: 60px;
+}
+
+.separador2:before {
+  content: '[separador 2]--------->';
+}
+
+.aire {
+  width: 100%;
+  height: 3000px;
+}
+
+.aire:before {
+  content: '[aire]--------->';
+}
+
+/*----------  Target animados  ----------*/
+
+.mascara1 {
+  background-color: #db7d0a;
+  left: 0%;
+}
+
+.mascara2 {
+  background-color: white;
+  left: 50%;
+}
+
+.mascara {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+
+.mascara-cont {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: -100%;
+}
+
+[target] {
+  position: relative;
+  overflow: hidden;
 }
 
 .fuente1 {
@@ -7100,13 +7271,25 @@ body {
 h1 {
   font-family: 'Julius Sans One', sans-serif;
   font-size: 3em;
-  color: #27252e;
+  color: rgba(21, 26, 40, 0.9);
+}
+
+h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2em;
+  color: rgba(21, 26, 40, 0.9);
+}
+
+h3 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.5em;
+  color: rgba(21, 26, 40, 0.9);
 }
 
 .menu-texto {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.5em;
-  color: #27252e;
+  color: rgba(21, 26, 40, 0.9);
 }
 
 .menu-texto a {
@@ -7114,12 +7297,12 @@ h1 {
 }
 
 .menu-texto-contenedor {
-  margin: 10åpx;
+  margin: 10px;
 }
 
 .texto-banner {
   font-family: 'Julius Sans One', sans-serif;
-  color: #fff;
+  color: white;
   font-size: 4em;
   font-weight: lighter;
   margin: 0px auto;
@@ -7142,11 +7325,110 @@ h1 {
   background-position: center;
 }
 
-.home-parallax1 {
-  background: url("../images/home-parallax1.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 500px;
+/*----------  Menu sticky  ----------*/
+
+#menu-sticky {
+  position: relative;
+  z-index: 999999 !important;
 }
+
+#menu-contenedor {
+  width: 100%;
+}
+
+#sombra-emulada {
+  width: 100%;
+  height: 40px;
+  background: url("../images/sombra.png?c=2") no-repeat center center;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+#home-banner1 {
+  position: relative;
+  z-index: 99998 !important;
+}
+
+.active {
+  border-bottom: 2px solid #db7d0a;
+}
+
+/*----------  Parallax  ----------*/
+
+#parallax1 {
+  width: 100%;
+  height: 500px;
+  z-index: 99918 !important;
+}
+
+#parallax1-img {
+  background: url("../images/home-parallax1.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+
+.parallaxParent {
+  height: 100vh;
+}
+
+.parallaxParentOverFlow {
+  overflow: hidden;
+}
+
+.parallaxParent > * {
+  height: 200%;
+  position: relative;
+  top: -100%;
+}
+
+#parallax2 {
+  width: 100%;
+  height: 400px;
+  z-index: 99919 !important;
+}
+
+#parallax2-img {
+  background: url("../images/home-liquido.png?c=1") no-repeat center center;
+  background-size: 100% auto;
+}
+
+.parallaxParent2 {
+  height: 100vh;
+  position: relative;
+}
+
+.parallaxParent2 > * {
+  height: 230%;
+  position: relative;
+  top: -100%;
+}
+
+.cuadro-liquido {
+  width: 70%;
+  height: 300px;
+  background-color: rgba(21, 26, 40, 0.85);
+  position: absolute;
+  top: 0px;
+  left: 15%;
+}
+
+.cuadro-liquido h1,
+.cuadro-liquido h3 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#parallax3 {
+  width: 100%;
+  height: 500px;
+  z-index: 99917 !important;
+}
+
+#parallax3-img {
+  background: url("../images/home-cafe.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+
+/*----------  Small  ----------*/
 
 @media only screen and (max-width: 40em) {
   .swiper-container {
@@ -7161,3 +7443,9 @@ h1 {
     margin-top: 100px;
   }
 }
+
+/*----------  Medium  ----------*/
+
+/*----------  Large  ----------*/
+
+/*----------  XL  ----------*/

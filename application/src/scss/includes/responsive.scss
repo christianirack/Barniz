@@ -1,0 +1,23 @@
+/*----------  Small  ----------*/
+@media only screen and (max-width: 40em) {
+	.swiper-container {
+		    height: 300px !important;
+	}
+	.texto-banner{
+		font-size: $size5;
+		width: 75%;
+		margin: 0px auto;
+		text-align: center;
+		margin-top: 100px;
+	}
+ } 
+/*----------  Medium  ----------*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+} 
+/*----------  Large  ----------*/
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+ } 
+/*----------  XL  ----------*/
+@media only screen and (min-width: 90.063em) {
+} 

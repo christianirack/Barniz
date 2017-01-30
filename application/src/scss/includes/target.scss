@@ -1,0 +1,26 @@
+/*----------  Target animados  ----------*/
+.mascara1{
+	//gris
+	background-color: $colorNaranja;
+	left: 0%;
+}
+.mascara2{
+	//azul
+	background-color: $colorBlanco;
+	left:50%;
+}
+.mascara{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+}
+.mascara-cont{
+	position: absolute;
+	width: 200%;
+	height: 100%;
+	left: -100%;
+}
+[target]{
+	position: relative;
+	overflow: hidden;
+}

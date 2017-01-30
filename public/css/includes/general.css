@@ -1,0 +1,40 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+.debug {
+  color: #fa00d4;
+  opacity: .3; }
+
+html, body {
+  font-size: 12px; }
+
+#vbody {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px;
+  border: 0px; }
+
+#menu {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px;
+  border: 0px;
+  background-color: white; }
+
+.separador {
+  width: 100%;
+  height: 40px; }
+  .separador:before {
+    content: '[separador 1]--------->'; }
+
+.separador2 {
+  width: 100%;
+  height: 60px; }
+  .separador2:before {
+    content: '[separador 2]--------->'; }
+
+.aire {
+  width: 100%;
+  height: 3000px; }
+  .aire:before {
+    content: '[aire]--------->'; }
