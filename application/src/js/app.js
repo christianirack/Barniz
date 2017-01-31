@@ -17,6 +17,8 @@ $(function() {
             // myVivus.play(1);
         }
     }
+     /*----------  SVG  ----------*/
+
 
 
 
@@ -160,6 +162,9 @@ $(function() {
       /*----------  Parallax home ----------*/
     if(!isMobile.any()){
 
+        /*----------  Si no es un móvil, si es escritorio  ----------*/
+
+
         var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
                         .setTween("#parallax1 > div", {y: "100%", ease: Linear.easeNone})
@@ -177,6 +182,12 @@ $(function() {
         var controller4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
                         .setTween("#parallax3 > div", {y: "100%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 3"})
+                        .addTo(controller3);
+
+        var controller5 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax4"})
+                        .setTween("#parallax4 > div", {y: "50%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 3"})
                         .addTo(controller3);
 
@@ -202,12 +213,33 @@ $(function() {
                         .addIndicators({name: "home parallax 3"})
                         .addTo(controller3);
 
+
+        var controller5 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax4"})
+                        .setTween("#parallax4 > div", {y: "50%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 3"})
+
     }
 
 
 
     /*----------  Foundation  ----------*/
     $(document).foundation();
+
+    var timeScroll = 500;
+    $('.ir-nosotros').on('click touch', function(event) {
+        $('html, body').animate({
+                    scrollTop: ($(".llegar-nosotros").offset().top)+-200
+                }, timeScroll);
+        event.preventDefault();
+    });
+     $('.ir-home').on('click touch', function(event) {
+        $('html, body').animate({
+                    scrollTop: 0
+                }, timeScroll);
+        event.preventDefault();
+    });
+
 })
 
 

@@ -10,6 +10,10 @@
   		-webkit-tap-highlight-color: transparent; /* For some Androids */
 	}
 
+	#ogo-svg{
+		margin-left: 20px;
+	}
+
 
 
 	.swiper-container {
@@ -42,7 +46,7 @@
 		height: 20px !important;
 	}
 	.separador-movil{
-		height: 0px !important;
+		height: 10px !important;
 	}
 	#sombra-emulada{
 		opacity:1 !important;

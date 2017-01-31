@@ -7392,6 +7392,11 @@ h3 {
   fill: #E8AA5C;
 }
 
+#logo-svg {
+  min-width: 150px;
+  width: 10%;
+}
+
 /*----------  Parallax [ 1 ] ----------*/
 
 #parallax1 {
@@ -7466,6 +7471,24 @@ h3 {
   border-bottom: 2px solid #db7d0a;
 }
 
+.cuadro-liquido .home-menu-subtitulo {
+  padding-bottom: 20px;
+}
+
+.cuadro-liquido2 {
+  width: 70%;
+  height: 300px;
+  background-color: rgba(219, 125, 10, 0.8);
+  position: absolute;
+  top: 0px;
+  left: 15%;
+}
+
+.cuadro-liquido2 h1,
+.cuadro-liquido2 h3 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /*----------  Parallax [ 3 ]  ----------*/
 
 #parallax3 {
@@ -7476,6 +7499,11 @@ h3 {
 
 #parallax3-img {
   background-size: 100% auto;
+}
+
+.boton {
+  padding: 10px;
+  background-color: white;
 }
 
 /*----------  Small  ----------*/
@@ -7490,6 +7518,10 @@ h3 {
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
     /* For some Androids */
+  }
+
+  #ogo-svg {
+    margin-left: 20px;
   }
 
   .swiper-container {
@@ -7527,7 +7559,7 @@ h3 {
   }
 
   .separador-movil {
-    height: 0px !important;
+    height: 10px !important;
   }
 
   #sombra-emulada {
@@ -7565,6 +7597,10 @@ h3 {
     background: url("../m.images/home-cafe.jpg?c=2") no-repeat center center;
   }
 
+  #parallax4-img {
+    background: url("../m.images/home-bebidas.png?c=2") no-repeat center center;
+  }
+
   .parallax-bg {
     background: url("../m.images/home-banner.jpg");
   }
@@ -7588,6 +7624,10 @@ h3 {
 
   #parallax3-img {
     background: url("../images/home-cafe.jpg?c=2") no-repeat center center;
+  }
+
+  #parallax4-img {
+    background: url("../images/home-bebidas.png?c=2") no-repeat center center;
   }
 
   .parallax-bg {
