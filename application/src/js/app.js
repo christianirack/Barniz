@@ -88,6 +88,7 @@ $(function() {
                     .addIndicators({name: "Membresias"}) // add indicators (requires plugin)
                     .addTo(controller);
 */
+/*
     var tweenMem = TweenMax.fromTo("#parallax2", 2, {x: "-20%"}, {x: "0%"});
     var sceneMem = new ScrollMagic.Scene({triggerElement: "#trigger_sec3",triggerHook:1, duration: 0})
                     .setTween(tweenMem)
@@ -95,7 +96,7 @@ $(function() {
                     .addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
                     .addTo(controller);
 
-
+*/
     /*----------  Menu  ----------*/
     /*
      TweenMax.set("#parallax4",{x: "-60%"});
@@ -107,15 +108,23 @@ $(function() {
                     .addTo(controller);
 
     */
+    /*
     var tweenMenu = TweenMax.fromTo("#parallax4", 2, {x: "-20%"}, {x: "0%"});
     var sceneMenu = new ScrollMagic.Scene({triggerElement: "#trigger_sec4",triggerHook:1, duration: 0})
                     .setTween(tweenMenu)
                     //.setPin("#membresias-final")
                     .addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
                     .addTo(controller);
+    */
 
-
-
+/*
+var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
+    var sceneMenu = new ScrollMagic.Scene({triggerElement: "#trigger_sec8",triggerHook:1, duration: 0})
+                    .setTween(tweenMenu)
+                    //.setPin("#membresias-final")
+                    .addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
+                    .addTo(controller);
+*/
 
 
 
@@ -210,7 +219,7 @@ $(function() {
 
         var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         var es_1 =  new ScrollMagic.Scene({triggerElement: "#parallax1"})
-                        .setTween("#parallax1 > div", {y: "100%", ease: Linear.easeNone})
+                        .setTween("#parallax1 > div", {y: "70%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 1"})
                           .setClassToggle("#sec2", "activo")
                         .addTo(controller_p1);
@@ -230,7 +239,7 @@ $(function() {
 
         var controller_p3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
-                        .setTween("#parallax3 > div", {y: "100%", ease: Linear.easeNone})
+                        .setTween("#parallax3 > div", {y: "70%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 3"})
 
                         .addTo(controller_p3);
@@ -264,6 +273,13 @@ $(function() {
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
+
+              var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "150%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax8"})
+                        .setTween("#parallax8 > div", {y: "20%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 8"})
+                        .addTo(controller_p8);
 
     }else{
 
@@ -315,6 +331,13 @@ $(function() {
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
+
+         var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax8"})
+                        .setTween("#parallax8 > div", {y: "100%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 8"})
+                        .addTo(controller_p8);
 
     }
 

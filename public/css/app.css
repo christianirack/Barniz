@@ -172,7 +172,7 @@ h3 {
 /*----------  Parallax [ 1 ] ----------*/
 #parallax1 {
   width: 100%;
-  height: 700px;
+  height: 750px;
   z-index: 99918 !important; }
 
 #parallax1-img {
@@ -240,7 +240,7 @@ h3 {
 /*----------  Parallax [ 3 ]  ----------*/
 #parallax3 {
   width: 100%;
-  height: 700px !important;
+  height: 750px !important;
   z-index: 99917 !important; }
 
 #parallax3-img {
@@ -262,7 +262,7 @@ h3 {
 /*----------  Parallax [ 5 ]  ----------*/
 #parallax5 {
   width: 100%;
-  height: 700px !important;
+  height: 750px !important;
   z-index: 99917 !important; }
 
 #parallax5-img {
@@ -300,11 +300,40 @@ h3 {
 /*----------  Parallax [ 7 ]  ----------*/
 #parallax7 {
   width: 100%;
-  height: 700px !important;
+  height: 750px !important;
   z-index: 99917 !important; }
 
 #parallax7-img {
   background-size: 100% auto; }
+
+/*----------  Parallax [ 8 ]  ----------*/
+#parallax8 {
+  width: 100%;
+  height: 400px !important;
+  z-index: 999917 !important; }
+
+#parallax8-img {
+  background-size: 100% auto !important; }
+
+.home-liquido-menu8 {
+  width: 50%;
+  min-width: 200px;
+  margin: 0px auto; }
+
+.cuadro-liquido8 {
+  width: 50%;
+  left: 25%;
+  height: 300px;
+  background-color: rgba(21, 26, 40, 0.85);
+  position: absolute;
+  top: 0px; }
+  .cuadro-liquido8 h1, .cuadro-liquido8 h3 {
+    color: rgba(255, 255, 255, 0.9); }
+  .cuadro-liquido8 .home-liquido-subtitulo {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #db7d0a; }
+  .cuadro-liquido8 .home-menu-subtitulo {
+    padding-bottom: 20px; }
 
 /*----------  Small  ----------*/
 @media only screen and (max-width: 40em) {
@@ -371,6 +400,9 @@ h3 {
   #parallax7 {
     width: 100%;
     height: 420px !important; }
+  #parallax8 {
+    width: 100%;
+    height: 420px !important; }
   #parallax1-img {
     background: url(../m.images/home-mujer.jpg?c=2) no-repeat center center; }
   #parallax2-img {
@@ -385,6 +417,8 @@ h3 {
     background: url(../m.images/home-maquillaje.png?c=2) no-repeat center center; }
   #parallax7-img {
     background: url(../m.images/home-amigas.jpg?c=2) no-repeat center center; }
+  #parallax8-img {
+    background: url(../m.images/home-vino.png?c=2) no-repeat center center; }
   .parallax-bg {
     background: url(../m.images/home-banner.jpg); } }
 
@@ -408,7 +442,9 @@ h3 {
   #parallax7-img {
     background: url(../images/home-amigas.jpg?c=2) no-repeat center center; }
   .parallax-bg {
-    background: url(../images/home-banner.jpg); } }
+    background: url(../images/home-banner.jpg); }
+  #parallax8-img {
+    background: url(../images/home-vino.png?c=2) no-repeat center center; } }
 
 /*----------  Large  ----------*/
 @media only screen and (min-width: 64.063em) {
@@ -430,7 +466,9 @@ h3 {
   #parallax7-img {
     background: url(../images/home-amigas.jpg?c=2) no-repeat center center; }
   .parallax-bg {
-    background: url(../images/home-banner.jpg); } }
+    background: url(../images/home-banner.jpg); }
+  #parallax8-img {
+    background: url(../images/home-vino.png?c=2) no-repeat center center; } }
 
 /*----------  XL  ----------*/
 @media screen and (min-width: 40.063em) and (max-width: 64.063em) and (orientation: landscape) {
