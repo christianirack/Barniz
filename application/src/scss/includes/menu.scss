@@ -6,6 +6,17 @@
 }
 #menu-contenedor{
 	width:100%;
+	//background-color:$colorBlanco;
+}
+#menu{
+	//max-width: 1200px;
+	max-width: 100%;
+	margin: 0px auto;
+	padding: 0px;
+	border: 0px;
+	background-color: $colorBlanco;
+	padding-right: 50px;
+	padding-left: 50px;
 }
 #sombra-emulada{
 	width:100%;
@@ -18,8 +29,8 @@
 	position: relative;
 	z-index: 99998 !important;
 }
-.active {
-	border-bottom: 2px solid $colorNaranja;
+.activo {
+	//border-bottom: 2px solid $colorNaranja;
 }
 #svg1-icon g path{
 	stroke: none;

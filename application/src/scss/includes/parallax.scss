@@ -1,7 +1,9 @@
 /*----------  Parallax [ 1 ] ----------*/
+$parallaxSize:700px;
+$parallaxSizeInfo:400px;
 	#parallax1{
 		width: 100%;
-		height: 500px;
+		height: $parallaxSize;
 		z-index: 99918 !important;
 	}
 	#parallax1-img{
@@ -23,7 +25,7 @@
 	/*----------  Parallax [ 2 ]  ----------*/
 	#parallax2{
 		width: 100%;
-		height:400px;
+		height:$parallaxSizeInfo;
 		z-index: 99919 !important;
 
 	}
@@ -47,12 +49,12 @@
 		margin:0px auto;
 	}
 	.cuadro-liquido{
-		width:70%;
+		width:50%;
+		left:25%;
 		height:300px;
 		background-color:$colorMoradoTrans;
 		position:absolute;
 		top:0px;
-		left:15%;
 		h1,h3{
 			color: $colorBlancoTrans;
 		}
@@ -66,12 +68,12 @@
 
 	}
 	.cuadro-liquido2{
-		width:70%;
+		width:50%;
+		left:25%;
 		height:300px;
 		background-color:$colorNaranjaTrans;
 		position:absolute;
 		top:0px;
-		left:15%;
 		h1,h3{
 			color: $colorBlancoTrans;
 		}
@@ -82,7 +84,7 @@
 	/*----------  Parallax [ 3 ]  ----------*/
 	#parallax3{
 		width: 100%;
-		height: 500px;
+		height: $parallaxSize  !important;
 		z-index: 99917 !important;
 	}
 	#parallax3-img{
@@ -93,4 +95,69 @@
 		padding:10px;
 		background-color:$colorBlanco
 	}
+	/*----------  Parallax [ 4 ]  ----------*/
+	#parallax4{
+		width: 100%;
+		height: $parallaxSizeInfo;
+		z-index: 99917 !important;
+	}
+	#parallax4-img{
+		background-size: 100% auto;
+	
+	}
+	/*----------  Parallax [ 5 ]  ----------*/
+	#parallax5{
+		width: 100%;
+		height: $parallaxSize  !important;
+		z-index: 99917 !important;
+	}
+	#parallax5-img{
+		background-size: 100% auto;
+	
+	}
+	/*----------  Parallax [ 6 ]  ----------*/
+	#parallax6{
+		width: 100%;
+		height: $parallaxSizeInfo !important;
+		z-index: 999917 !important;
 
+	}
+	#parallax6-img{
+		background-size: 100% auto !important;
+
+	
+	}
+	.home-liquido-menu6{
+		width:50%;
+		min-width: 200px;
+		margin:0px auto;
+	}
+	.cuadro-liquido6{
+		width:50%;
+		left:25%;
+		height:300px;
+		background-color:$colorMarronTrans;
+		position:absolute;
+		top:0px;
+		h1,h3{
+			color: $colorBlancoTrans;
+		}
+		.home-liquido-subtitulo{
+			padding-bottom: 20px;
+			border-bottom: 2px solid $colorNaranja;
+		}
+		.home-menu-subtitulo{
+			padding-bottom: 20px;
+		}
+
+	}
+	/*----------  Parallax [ 7 ]  ----------*/
+	#parallax7{
+		width: 100%;
+		height: $parallaxSize !important;
+		z-index: 99917 !important;
+	}
+	#parallax7-img{
+		background-size: 100% auto;
+	
+	}

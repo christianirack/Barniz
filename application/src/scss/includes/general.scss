@@ -6,18 +6,16 @@ html, body{
 	font-size: 12px;
 }
 #vbody{
-	max-width: 1200px;
+	//max-width: 1200px;
+	max-width: 100%;
 	margin: 0px auto;
 	padding: 0px;
 	border: 0px;
 }
-#menu{
-	max-width: 1200px;
-	margin: 0px auto;
-	padding: 0px;
-	border: 0px;
-	background-color: $colorBlanco;
+.ir{
+	cursor: pointer;
 }
+
 .separador{
 	width: 100%;
 	height: 40px;

@@ -7205,18 +7205,14 @@ body {
 }
 
 #vbody {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0px auto;
   padding: 0px;
   border: 0px;
 }
 
-#menu {
-  max-width: 1200px;
-  margin: 0px auto;
-  padding: 0px;
-  border: 0px;
-  background-color: white;
+.ir {
+  cursor: pointer;
 }
 
 .separador {
@@ -7369,6 +7365,16 @@ h3 {
   width: 100%;
 }
 
+#menu {
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  border: 0px;
+  background-color: white;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
 #sombra-emulada {
   width: 100%;
   height: 40px;
@@ -7381,10 +7387,6 @@ h3 {
 #home-banner1 {
   position: relative;
   z-index: 99998 !important;
-}
-
-.active {
-  border-bottom: 2px solid #db7d0a;
 }
 
 #svg1-icon g path {
@@ -7401,7 +7403,7 @@ h3 {
 
 #parallax1 {
   width: 100%;
-  height: 500px;
+  height: 700px;
   z-index: 99918 !important;
 }
 
@@ -7453,17 +7455,17 @@ h3 {
 }
 
 .cuadro-liquido {
-  width: 70%;
+  width: 50%;
+  left: 25%;
   height: 300px;
   background-color: rgba(21, 26, 40, 0.85);
   position: absolute;
   top: 0px;
-  left: 15%;
 }
 
 .cuadro-liquido h1,
 .cuadro-liquido h3 {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .cuadro-liquido .home-liquido-subtitulo {
@@ -7476,24 +7478,24 @@ h3 {
 }
 
 .cuadro-liquido2 {
-  width: 70%;
+  width: 50%;
+  left: 25%;
   height: 300px;
   background-color: rgba(219, 125, 10, 0.8);
   position: absolute;
   top: 0px;
-  left: 15%;
 }
 
 .cuadro-liquido2 h1,
 .cuadro-liquido2 h3 {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /*----------  Parallax [ 3 ]  ----------*/
 
 #parallax3 {
   width: 100%;
-  height: 500px;
+  height: 700px !important;
   z-index: 99917 !important;
 }
 
@@ -7504,6 +7506,83 @@ h3 {
 .boton {
   padding: 10px;
   background-color: white;
+}
+
+/*----------  Parallax [ 4 ]  ----------*/
+
+#parallax4 {
+  width: 100%;
+  height: 400px;
+  z-index: 99917 !important;
+}
+
+#parallax4-img {
+  background-size: 100% auto;
+}
+
+/*----------  Parallax [ 5 ]  ----------*/
+
+#parallax5 {
+  width: 100%;
+  height: 700px !important;
+  z-index: 99917 !important;
+}
+
+#parallax5-img {
+  background-size: 100% auto;
+}
+
+/*----------  Parallax [ 6 ]  ----------*/
+
+#parallax6 {
+  width: 100%;
+  height: 400px !important;
+  z-index: 999917 !important;
+}
+
+#parallax6-img {
+  background-size: 100% auto !important;
+}
+
+.home-liquido-menu6 {
+  width: 50%;
+  min-width: 200px;
+  margin: 0px auto;
+}
+
+.cuadro-liquido6 {
+  width: 50%;
+  left: 25%;
+  height: 300px;
+  background-color: rgba(103, 20, 19, 0.8);
+  position: absolute;
+  top: 0px;
+}
+
+.cuadro-liquido6 h1,
+.cuadro-liquido6 h3 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cuadro-liquido6 .home-liquido-subtitulo {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #db7d0a;
+}
+
+.cuadro-liquido6 .home-menu-subtitulo {
+  padding-bottom: 20px;
+}
+
+/*----------  Parallax [ 7 ]  ----------*/
+
+#parallax7 {
+  width: 100%;
+  height: 700px !important;
+  z-index: 99917 !important;
+}
+
+#parallax7-img {
+  background-size: 100% auto;
 }
 
 /*----------  Small  ----------*/
@@ -7570,9 +7649,16 @@ h3 {
 
   /*----------  Parallax Small  ----------*/
 
+  .cuadro-liquido,
+  .cuadro-liquido2,
+  .cuadro-liquido6 {
+    width: 85% !important;
+    left: 8% !important;
+  }
+
   #parallax1 {
     width: 100%;
-    height: 200px !important;
+    height: 400px !important;
   }
 
   #parallax2 {
@@ -7582,7 +7668,27 @@ h3 {
 
   #parallax3 {
     width: 100%;
-    height: 200px !important;
+    height: 400px !important;
+  }
+
+  #parallax4 {
+    width: 100%;
+    height: 420px !important;
+  }
+
+  #parallax5 {
+    width: 100%;
+    height: 400px !important;
+  }
+
+  #parallax6 {
+    width: 100%;
+    height: 420px !important;
+  }
+
+  #parallax7 {
+    width: 100%;
+    height: 420px !important;
   }
 
   #parallax1-img {
@@ -7599,6 +7705,18 @@ h3 {
 
   #parallax4-img {
     background: url("../m.images/home-bebidas.png?c=2") no-repeat center center;
+  }
+
+  #parallax5-img {
+    background: url("../m.images/home-unas.jpg?c=2") no-repeat center center;
+  }
+
+  #parallax6-img {
+    background: url("../m.images/home-maquillaje.png?c=2") no-repeat center center;
+  }
+
+  #parallax7-img {
+    background: url("../m.images/home-amigas.jpg?c=2") no-repeat center center;
   }
 
   .parallax-bg {
@@ -7628,6 +7746,18 @@ h3 {
 
   #parallax4-img {
     background: url("../images/home-bebidas.png?c=2") no-repeat center center;
+  }
+
+  #parallax5-img {
+    background: url("../images/home-unas.jpg?c=2") no-repeat center center;
+  }
+
+  #parallax6-img {
+    background: url("../images/home-maquillaje.png?c=2") no-repeat center center;
+  }
+
+  #parallax7-img {
+    background: url("../images/home-amigas.jpg?c=2") no-repeat center center;
   }
 
   .parallax-bg {

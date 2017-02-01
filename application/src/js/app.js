@@ -4,6 +4,11 @@ $(function() {
 
 
 
+  
+/* --- controls --- */
+
+
+
     
     /*----------  SVG  ----------*/
     if ($("#svg1").attr('id')) {
@@ -122,14 +127,16 @@ $(function() {
 
     var scene3 = new ScrollMagic.Scene({triggerHook:0.7, triggerElement: "#trigger1", duration: 350})
                 .addIndicators({name: "svg"}) // add indicators (requires plugin)
+                //.setClassToggle("#sec1", "activo")
                 .addTo(controller);
 
         scene3.on("leave", function (event) {
         //console.log("Scene: " +event.state);
         //console.log("scrollDirection: " +event.scrollDirection);
-         if(event.state=='BEFORE'){
-            myVivus.play(-1);
-        }
+             if(event.state=='BEFORE'){
+                myVivus.play(-1);
+               // subraya("sec1");
+            }
         
         //$("#sombra-emulada").css('opacity',0);
         });
@@ -137,6 +144,7 @@ $(function() {
         scene3.on("enter", function (event) {
         //console.log("Scene entered.");
             myVivus.play();
+            //subraya("sec2");
         });
 
         if(isMobile.any()){
@@ -147,19 +155,8 @@ $(function() {
 
 
     /*----------  Stiky menu  ----------*/
-    new ScrollMagic.Scene({triggerElement: "#trigger_sec1", duration: 450})
-                    .setClassToggle("#sec1", "active") // add class toggle
-                    .addIndicators({name: "menu-sec1"}) // add indicators (requires plugin)
-                    .addTo(controller);
-    new ScrollMagic.Scene({triggerElement: "#trigger_sec2", duration: 350})
-                    .setClassToggle("#sec2", "active") // add class toggle
-                    .addIndicators({name: "menu-sec2"}) // add indicators (requires plugin)
-                    .addTo(controller);
+
     
-
-
-
-
 
 
 
@@ -212,15 +209,21 @@ $(function() {
 
 
         var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-        new ScrollMagic.Scene({triggerElement: "#parallax1"})
+        var es_1 =  new ScrollMagic.Scene({triggerElement: "#parallax1"})
                         .setTween("#parallax1 > div", {y: "100%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 1"})
+                          .setClassToggle("#sec2", "activo")
                         .addTo(controller_p1);
 
-        var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
+
+
+
+
+        var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "240%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "50%",ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 2"})
+                         .setClassToggle("#sec3", "activo")
                         .addTo(controller_p2);
 
 
@@ -229,6 +232,7 @@ $(function() {
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
                         .setTween("#parallax3 > div", {y: "100%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 3"})
+
                         .addTo(controller_p3);
 
         var controller_p4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
@@ -236,17 +240,40 @@ $(function() {
                         .setTween("#parallax4 > div", {y: "50%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 4"})
+                         .setClassToggle("#sec4", "activo")
                         .addTo(controller_p4);
+
+
+         var controller_p5 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax5"})
+                        .setTween("#parallax5 > div", {y: "50%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 5"})
+                        .addTo(controller_p5);
+
+          var controller_p6 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "150%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax6"})
+                        .setTween("#parallax6 > div", {y: "20%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 6"})
+                        .addTo(controller_p6);
+
+            var controller_p7 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax7"})
+                        .setTween("#parallax7 > div", {y: "100%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 7"})
+                        .addTo(controller_p7);
 
     }else{
 
-         var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+         var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
                         .setTween("#parallax1 > div", {y: "100%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 1"})
                         .addTo(controller_p1);
 
-        var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
+        var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "50%",ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 2"})
@@ -254,18 +281,40 @@ $(function() {
 
 
 
-        var controller_p3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        var controller_p3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
                         .setTween("#parallax3 > div", {y: "100%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 3"})
                         .addTo(controller_p3);
 
 
-         var controller_p4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
+         var controller_p4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax4"})
                         .setTween("#parallax4 > div", {y: "50%", ease: Linear.easeNone})
                         .addIndicators({name: "home parallax 4"})
                         .addTo(controller_p4);
+
+
+         var controller_p5 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax5"})
+                        .setTween("#parallax5 > div", {y: "50%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 5"})
+                        .addTo(controller_p5);
+
+          var controller_p6 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax6"})
+                        .setTween("#parallax6 > div", {y: "50%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 6"})
+                        .addTo(controller_p6);
+
+            var controller_p7 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
+        new ScrollMagic.Scene({triggerElement: "#parallax7"})
+                        .setTween("#parallax7 > div", {y: "90%", ease: Linear.easeNone})
+                       // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
+                        .addIndicators({name: "home parallax 7"})
+                        .addTo(controller_p7);
 
     }
 
@@ -274,17 +323,13 @@ $(function() {
     /*----------  Foundation  ----------*/
     $(document).foundation();
 
-    var timeScroll = 500;
-    $('.ir-nosotros').on('click touch', function(event) {
+    var timeScroll = 800;
+    $('.ir').on('click touch', function(event) {
+        var ir = $(this).attr('ir');
+        //alert(ir);
         $('html, body').animate({
-                    scrollTop: ($(".llegar-nosotros").offset().top)+-200
-                }, timeScroll);
-        event.preventDefault();
-    });
-     $('.ir-home').on('click touch', function(event) {
-        $('html, body').animate({
-                    scrollTop: 0
-                }, timeScroll);
+                    scrollTop: $('#'+ir).offset().top-200
+        }, timeScroll);
         event.preventDefault();
     });
 
@@ -333,5 +378,8 @@ function animacionesHome(){
     })
    
 }
+
+
+
 
 

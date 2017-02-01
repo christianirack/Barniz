@@ -39,6 +39,7 @@ var jsFiles = ['vendor/jquery.js',
                 'ScrollMagic.js',
                 'plugins/debug.addIndicators.js',
                 'plugins/animation.gsap.js',
+                'plugins/DrawSVGPlugin.min.js',
                 'app.js'];
 
 /*----------  Incluir scripts  ----------*/
