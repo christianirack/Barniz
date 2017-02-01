@@ -37140,10 +37140,10 @@ $(function() {
 
     /*----------  ScrollMagic FX  ----------*/
      if (!isMobile.any()) {
-        
+      
         /*----------  Menu pegajoso para escritorio ----------*/     
         var scene = new ScrollMagic.Scene( )
-                    .setPin("#menu-sticky")
+                   // .setPin("#menu-sticky")
                     .addIndicators({name: "Menú"}) // add indicators (requires plugin)
                     .addTo(controller);
        /*----------  Sombra del menu  ----------*/

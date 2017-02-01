@@ -1,7 +1,5 @@
-/*----------  Small  ----------*/
-@media only screen and (max-width: 40em) {
 
-	
+@mixin movil{
 	html,body,div{
 
 		 verflow-y: scroll; /* has to be scroll, not auto */
@@ -55,6 +53,13 @@
 	}
 	/*----------  Parallax Small  ----------*/
 	@include parallaxSmall;
+}
+
+
+/*----------  Small  ----------*/
+@media only screen and (max-width: 40em) {
+
+	@include movil;
 
  } 
 /*----------  Medium  ----------*/
@@ -70,8 +75,40 @@
 /*----------  Large  ----------*/
 //@media only screen and (min-width: 64.063em) and (max-width: 90em) {
 @media only screen and (min-width: 64.063em){
+	.texto-banner{
+			font-size: $size5;
+			margin-top: 200px;
+	}	
+	@include parallaxMedium;
  } 
 /*----------  XL  ----------*/
 @media only screen and (min-width: 90.063em) {
 
 } 
+@media  screen and (min-width: 40.063em) and  (max-width:64.063em) and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+
+  .ocultar{
+	opacity:0;
+
+  }
+  #logoLanscape{
+  	display: block !important;
+  	width:100%;
+  	height:100%;
+  	position:fixed;
+  	left:0px;
+  	top:0px;
+  	z-index: 999772954;
+  	background-color:$colorBlanco;
+
+  }
+	#svg-logo2{
+		width:20%;
+		position:absolute;
+		left:40%;
+		top:40%;
+		opacity:1;
+
+	}
+}

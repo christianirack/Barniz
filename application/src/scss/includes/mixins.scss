@@ -8,7 +8,10 @@
 
 @mixin parallaxSmall{
 
+		#logo-svg{
 
+			display: inline-block !important;
+		}
 	.cuadro-liquido, .cuadro-liquido2, .cuadro-liquido6{
 		width:85% !important;
 		left:8% !important;
