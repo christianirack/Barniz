@@ -22,32 +22,42 @@ html, body {
   padding: 0px;
   border: 0px; }
 
+.button {
+  background-color: #db7d0a !important;
+  color: white !important; }
+
+.input-group-button {
+  text-align: left !important; }
+
+.datepicker-close {
+  padding: 10px !important;
+  color: #db7d0a !important; }
+  .datepicker-close a {
+    font-size: 2.5 em !important; }
+
 .ir {
   cursor: pointer; }
 
 .separador {
   width: 100%;
   height: 40px; }
-  .separador:before {
-    content: '[separador]--------->'; }
 
 .separador2 {
   width: 100%;
   height: 60px; }
-  .separador2:before {
-    content: '[separador 2]--------->'; }
 
 .separador3 {
   width: 100%;
   height: 80px; }
-  .separador3:before {
-    content: '[separador 3]--------->'; }
 
 .aire {
-  width: 100%;
-  height: 3000px; }
-  .aire:before {
-    content: '[aire]--------->'; }
+  /*
+	width:100%;
+	height:3000px;
+	&:before{
+		//content: '[aire]--------->'
+	}
+	*/ }
 
 .texto {
   font-size: 1.2em; }
@@ -316,15 +326,13 @@ h3 {
   background-size: 100% auto !important; }
 
 .home-liquido-menu8 {
-  width: 50%;
-  min-width: 200px;
+  width: 90%;
+  min-width: 400px;
   margin: 0px auto; }
 
 .cuadro-liquido8 {
-  width: 50%;
-  left: 25%;
-  height: 300px;
-  background-color: rgba(21, 26, 40, 0.85);
+  width: 100%;
+  height: auto !important;
   position: absolute;
   top: 0px; }
   .cuadro-liquido8 h1, .cuadro-liquido8 h3 {
@@ -334,6 +342,20 @@ h3 {
     border-bottom: 2px solid #db7d0a; }
   .cuadro-liquido8 .home-menu-subtitulo {
     padding-bottom: 20px; }
+  .cuadro-liquido8 .cuadro-centrado {
+    color: white;
+    width: 100%;
+    padding: 20px;
+    max-width: 1000px;
+    background-color: rgba(21, 26, 40, 0.85);
+    margin: 0px auto; }
+  .cuadro-liquido8 .cuadro-centrado * {
+    color: white; }
+  .cuadro-liquido8 .citas {
+    border-right: 1px solid #db7d0a;
+    padding-right: 20px; }
+  .cuadro-liquido8 .contacto {
+    padding-left: 20px; }
 
 /*----------  Small  ----------*/
 @media only screen and (max-width: 40em) {
@@ -418,7 +440,7 @@ h3 {
   #parallax7-img {
     background: url(../m.images/home-amigas.jpg?c=2) no-repeat center center; }
   #parallax8-img {
-    background: url(../m.images/home-vino.png?c=2) no-repeat center center; }
+    background: url(../m.images/home-vino.png?c=3) no-repeat center center; }
   .parallax-bg {
     background: url(../m.images/home-banner.jpg); } }
 
@@ -444,7 +466,7 @@ h3 {
   .parallax-bg {
     background: url(../images/home-banner.jpg); }
   #parallax8-img {
-    background: url(../images/home-vino.png?c=2) no-repeat center center; } }
+    background: url(../images/home-vino.png?c=3) no-repeat center center; } }
 
 /*----------  Large  ----------*/
 @media only screen and (min-width: 64.063em) {
@@ -468,7 +490,7 @@ h3 {
   .parallax-bg {
     background: url(../images/home-banner.jpg); }
   #parallax8-img {
-    background: url(../images/home-vino.png?c=2) no-repeat center center; } }
+    background: url(../images/home-vino.png?c=3) no-repeat center center; } }
 
 /*----------  XL  ----------*/
 @media screen and (min-width: 40.063em) and (max-width: 64.063em) and (orientation: landscape) {
@@ -490,3 +512,6 @@ h3 {
     left: 40%;
     top: 40%;
     opacity: 1; } }
+
+.footer {
+  background-color: #e3e3e3; }

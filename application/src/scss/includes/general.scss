@@ -12,6 +12,21 @@ html, body{
 	padding: 0px;
 	border: 0px;
 }
+.button {
+	background-color: $colorNaranja !important;
+	color: $colorBlanco !important;
+	
+}
+.input-group-button{
+	text-align: left !important;
+}
+.datepicker-close{
+	padding:10px !important;
+	color: $colorNaranja !important;
+	a{
+		font-size: 2.5 em !important;
+	}
+}
 .ir{
 	cursor: pointer;
 }
@@ -20,29 +35,31 @@ html, body{
 	width: 100%;
 	height: 40px;
 	&:before{
-		content: '[separador]--------->'
+		//	content: '[separador]--------->'
 	}
 }
 .separador2{
 	width: 100%;
 	height: 60px;
 	&:before{
-		content: '[separador 2]--------->'
+		//content: '[separador 2]--------->'
 	}
 }
 .separador3{
 	width: 100%;
 	height: 80px;
 	&:before{
-		content: '[separador 3]--------->'
+		//content: '[separador 3]--------->'
 	}
 }
 .aire{
+	/*
 	width:100%;
 	height:3000px;
 	&:before{
-		content: '[aire]--------->'
+		//content: '[aire]--------->'
 	}
+	*/
 }
 .texto{
 	font-size:$size1-texto

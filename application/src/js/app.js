@@ -56,11 +56,11 @@ $(function() {
         /*----------  Menu pegajoso para escritorio ----------*/     
         var scene = new ScrollMagic.Scene( )
                    // .setPin("#menu-sticky")
-                    .addIndicators({name: "Menú"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Menú"}) // add indicators (requires plugin)
                     .addTo(controller);
        /*----------  Sombra del menu  ----------*/
         var scene2 = new ScrollMagic.Scene({offset: 100})
-                    .addIndicators({name: "debugger"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "debugger"}) // add indicators (requires plugin)
                     .addTo(controller);
         scene2.on("enter", function (event) {
             //console.log("Scene entered.");
@@ -78,14 +78,14 @@ $(function() {
     var sceneMem = new ScrollMagic.Scene({triggerElement: "#trigger_sec3",triggerHook:0.7, duration: 400})
                     .setTween(tweenMem)
                     //.setPin("#membresias-final")
-                    .addIndicators({name: "Membresias"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Membresias"}) // add indicators (requires plugin)
                     .addTo(controller);
 
     var tweenMemLiq = TweenMax.fromTo("#parallax2-img", 3, {opacity:0}, {opacity:1});
     var sceneMemLiq = new ScrollMagic.Scene({triggerElement: "#trigger_sec3",triggerHook:0.6, duration: 300})
                     .setTween(tweenMemLiq)
                     //.setPin("#membresias-final")
-                    .addIndicators({name: "Membresias"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Membresias"}) // add indicators (requires plugin)
                     .addTo(controller);
 */
 /*
@@ -93,7 +93,7 @@ $(function() {
     var sceneMem = new ScrollMagic.Scene({triggerElement: "#trigger_sec3",triggerHook:1, duration: 0})
                     .setTween(tweenMem)
                     //.setPin("#membresias-final")
-                    .addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
                     .addTo(controller);
 
 */
@@ -104,7 +104,7 @@ $(function() {
     var sceneMem = new ScrollMagic.Scene({triggerElement: "#trigger_sec4",triggerHook:0.7, duration: 400})
                     .setTween(tweenMem)
                     //.setPin("#membresias-final")
-                    .addIndicators({name: "Menú"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Menú"}) // add indicators (requires plugin)
                     .addTo(controller);
 
     */
@@ -113,7 +113,7 @@ $(function() {
     var sceneMenu = new ScrollMagic.Scene({triggerElement: "#trigger_sec4",triggerHook:1, duration: 0})
                     .setTween(tweenMenu)
                     //.setPin("#membresias-final")
-                    .addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
                     .addTo(controller);
     */
 
@@ -122,7 +122,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
     var sceneMenu = new ScrollMagic.Scene({triggerElement: "#trigger_sec8",triggerHook:1, duration: 0})
                     .setTween(tweenMenu)
                     //.setPin("#membresias-final")
-                    .addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "Menú paralalx"}) // add indicators (requires plugin)
                     .addTo(controller);
 */
 
@@ -135,7 +135,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
    /*----------  Animación SVG ----------*/
 
     var scene3 = new ScrollMagic.Scene({triggerHook:0.7, triggerElement: "#trigger1", duration: 350})
-                .addIndicators({name: "svg"}) // add indicators (requires plugin)
+                //.addIndicators({name: "svg"}) // add indicators (requires plugin)
                 //.setClassToggle("#sec1", "activo")
                 .addTo(controller);
 
@@ -220,7 +220,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         var es_1 =  new ScrollMagic.Scene({triggerElement: "#parallax1"})
                         .setTween("#parallax1 > div", {y: "70%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 1"})
+                        //.addIndicators({name: "home parallax 1"})
                           .setClassToggle("#sec2", "activo")
                         .addTo(controller_p1);
 
@@ -231,7 +231,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "240%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "50%",ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 2"})
+                        //.addIndicators({name: "home parallax 2"})
                          .setClassToggle("#sec3", "activo")
                         .addTo(controller_p2);
 
@@ -240,7 +240,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         var controller_p3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
                         .setTween("#parallax3 > div", {y: "70%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 3"})
+                        //.addIndicators({name: "home parallax 3"})
 
                         .addTo(controller_p3);
 
@@ -248,7 +248,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         new ScrollMagic.Scene({triggerElement: "#parallax4"})
                         .setTween("#parallax4 > div", {y: "50%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 4"})
+                        //.addIndicators({name: "home parallax 4"})
                          .setClassToggle("#sec4", "activo")
                         .addTo(controller_p4);
 
@@ -257,42 +257,45 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         new ScrollMagic.Scene({triggerElement: "#parallax5"})
                         .setTween("#parallax5 > div", {y: "50%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 5"})
+                        //.addIndicators({name: "home parallax 5"})
                         .addTo(controller_p5);
 
           var controller_p6 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "150%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax6"})
                         .setTween("#parallax6 > div", {y: "20%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 6"})
+                        //.addIndicators({name: "home parallax 6"})
                         .addTo(controller_p6);
 
             var controller_p7 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax7"})
                         .setTween("#parallax7 > div", {y: "100%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 7"})
+                        //.addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
+
+                        /*
 
               var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "150%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax8"})
                         .setTween("#parallax8 > div", {y: "20%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 8"})
+                        //.addIndicators({name: "home parallax 8"})
                         .addTo(controller_p8);
+                        */
 
     }else{
 
          var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
                         .setTween("#parallax1 > div", {y: "100%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 1"})
+                        //.addIndicators({name: "home parallax 1"})
                         .addTo(controller_p1);
 
         var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "50%",ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 2"})
+                        //.addIndicators({name: "home parallax 2"})
                         .addTo(controller_p2);
 
 
@@ -300,14 +303,14 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         var controller_p3 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
                         .setTween("#parallax3 > div", {y: "100%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 3"})
+                        //.addIndicators({name: "home parallax 3"})
                         .addTo(controller_p3);
 
 
          var controller_p4 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax4"})
                         .setTween("#parallax4 > div", {y: "50%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 4"})
+                        //.addIndicators({name: "home parallax 4"})
                         .addTo(controller_p4);
 
 
@@ -315,32 +318,49 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         new ScrollMagic.Scene({triggerElement: "#parallax5"})
                         .setTween("#parallax5 > div", {y: "50%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 5"})
+                        //.addIndicators({name: "home parallax 5"})
                         .addTo(controller_p5);
 
           var controller_p6 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax6"})
                         .setTween("#parallax6 > div", {y: "50%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 6"})
+                        //.addIndicators({name: "home parallax 6"})
                         .addTo(controller_p6);
 
             var controller_p7 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax7"})
                         .setTween("#parallax7 > div", {y: "90%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 7"})
+                        //.addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
+
+                        /*
 
          var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax8"})
                         .setTween("#parallax8 > div", {y: "100%", ease: Linear.easeNone})
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
-                        .addIndicators({name: "home parallax 8"})
+                        //.addIndicators({name: "home parallax 8"})
                         .addTo(controller_p8);
+                        */
 
     }
+    /*----------  Picker  ----------*/
+        if(!isMobile.any()){
+            var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+            $('#dp1').fdatepicker({
+                //'02-12-1989' format: 'mm-dd-yyyy',
+                initialDate: utc,
+                format: 'yyyy-mm-dd',
+                disableDblClickSelection: true,
+                leftArrow:'<<',
+                rightArrow:'>>',
+                closeIcon:'X',
+                closeButton: true
+            });
 
+        }
 
 
     /*----------  Foundation  ----------*/

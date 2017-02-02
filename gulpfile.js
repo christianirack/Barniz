@@ -28,6 +28,7 @@ const public = './public/';
 var cssFiles = ['swiper.css',
                 'gFonts.css',
                 'foundation.css',
+                'foundation-datepicker.css',
                 'app.css'];
 // en application/src
 var jsFiles = ['vendor/jquery.js',
@@ -40,6 +41,7 @@ var jsFiles = ['vendor/jquery.js',
                 'plugins/debug.addIndicators.js',
                 'plugins/animation.gsap.js',
                 'plugins/DrawSVGPlugin.min.js',
+                'foundation-datepicker.js',
                 'app.js'];
 
 /*----------  Incluir scripts  ----------*/
