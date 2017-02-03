@@ -9,17 +9,17 @@
 h1{
 	@include fuente2();
 	font-size: $size4;
-	color:$colorMorado;	
+	//color:$colorMorado;	
 }
 h2{
 	@include fuente2();
 	font-size: $size3;
-	color:$colorMorado;	
+	//color:$colorMorado;	
 }
 h3{
 	@include fuente2();
 	font-size: $size2;
-	color:$colorMorado;	
+	//color:$colorMorado;	
 }
 .menu-texto{
 	@include fuente1();

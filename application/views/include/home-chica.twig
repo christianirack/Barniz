@@ -1,9 +1,28 @@
 
+{#
 <div id="menu_trigger_sec3"></div>
 <div class="columns small-12 sensible" sensible="sec3">
 	<div class="row expanded align-center" >
 		<div class="columns small-12 parallaxParent parallaxParentOverFlow" id="parallax1" >
-				<div id="parallax1-img"></div>
+
+				<div id="parallax1-img" class="imagenParallax"></div>
 		</div>
 	</div>
 </div>
+#}
+
+<div class="colums small-12">
+
+		<script type="text/javascript">
+			 if (!isMobile.any()) {
+			 	document.write('<div class="parallax-window _parallax1" data-parallax="scroll" data-image-src="public/images/home-mujer.jpg" data-position-y="80px" data-speed="0.4" />');
+			 }else{
+			 //	alert('escribe');
+			 	document.write('<img src="public/o.images/home-mujer.jpg" />');
+			 }
+
+		</script>
+
+	<div id="bloque-membresias"></div>
+</div>
+

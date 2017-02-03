@@ -5,13 +5,36 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> {% block head %}
     <title>{% block title %}{% endblock %}</title>
+    <script type="text/javascript">
+        isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+        
+    </script>
     <link rel="stylesheet" href="{{ APPPATH }}public/css/bundle.css?c={{ random() }}" type="text/css" />
     <script type="text/javascript" src="{{ APPPATH }}public/js/bundle.js?c={{ random() }}"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
     {% endblock %}
 </head>
 
 <body>
+
     <div id="logoLanscape" style="display:none">
         
 
@@ -39,15 +62,14 @@
     <div id="menu-sticky" class="ocultar">
          {% block menu %} {{ include ('include/menu.twig') }} {% endblock %} 
     </div>
+
+
     <div id="vbody" class="ocultar">
         <div class="row expanded small-uncollapse">
             {% block header %}  {% endblock %} 
             {% block content %}  {% endblock %} 
-            
+            {% block footer %}  {% endblock %}
         </div>
-
     </div>
-    {% block footer %}  {% endblock %}
 </body>
-
 </html>

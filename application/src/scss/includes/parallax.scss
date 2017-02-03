@@ -1,13 +1,24 @@
 /*----------  Parallax [ 1 ] ----------*/
 $parallaxSize:750px;
 $parallaxSizeInfo:400px;
+$parallaxSizeInfo2:200px;
+
+
+
+		._parallax1 {
+		    height:600px !important;
+		    background: transparent;
+		}
+
+
+
 	#parallax1{
 		width: 100%;
 		height: $parallaxSize;
 		z-index: 99918 !important;
 	}
 	#parallax1-img{
-		background-size: 100% auto;
+		height: 100vh;
 	
 	}
 	.parallaxParent {
@@ -20,8 +31,9 @@ $parallaxSizeInfo:400px;
 	.parallaxParent > * {
 		height: 200%;
 		position: relative;
-		top: -100%;
+		top: 0%;
 	}
+
 	/*----------  Parallax [ 2 ]  ----------*/
 	#parallax2{
 		width: 100%;

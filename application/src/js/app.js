@@ -11,7 +11,9 @@ $(function() {
 
     
     /*----------  SVG  ----------*/
+    /*
     if ($("#svg1").attr('id')) {
+        
         myVivus = new Vivus('svg1', {
             duration: 50
 
@@ -21,7 +23,9 @@ $(function() {
             //myVivus = new Vivus('my-svg-id',{duration: 200});
             // myVivus.play(1);
         }
+        
     }
+    */
      /*----------  SVG  ----------*/
 
 
@@ -36,7 +40,7 @@ $(function() {
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        parallax: true,
+        parallax: false,
         autoplay: 2000,
         loop: true,
         speed: 600
@@ -51,24 +55,17 @@ $(function() {
     var controller = new ScrollMagic.Controller();
 
     /*----------  ScrollMagic FX  ----------*/
-     if (!isMobile.any()) {
-      
+    var medida = $(window).width();
+     if (!isMobile.any() && medida > 1020) {
         /*----------  Menu pegajoso para escritorio ----------*/     
-        var scene = new ScrollMagic.Scene( )
-                   // .setPin("#menu-sticky")
-                    //.addIndicators({name: "Menú"}) // add indicators (requires plugin)
-                    .addTo(controller);
-       /*----------  Sombra del menu  ----------*/
-        var scene2 = new ScrollMagic.Scene({offset: 100})
-                    //.addIndicators({name: "debugger"}) // add indicators (requires plugin)
-                    .addTo(controller);
+        var scene2 = new ScrollMagic.Scene({offset: 0})
+        .setPin("#menu-sticky")
+        .addTo(controller);
         scene2.on("enter", function (event) {
-            //console.log("Scene entered.");
-            $("#sombra-emulada").css('opacity',1);
+        $("#sombra-emulada").css('opacity',1);
         });
         scene2.on("leave", function (event) {
-            //console.log("Scene left." +event.state);
-           $("#sombra-emulada").css('opacity',0);
+        $("#sombra-emulada").css('opacity',0);
         });
     }
 
@@ -133,7 +130,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 
    /*----------  Animación SVG ----------*/
-
+/*
     var scene3 = new ScrollMagic.Scene({triggerHook:0.7, triggerElement: "#trigger1", duration: 350})
                 //.addIndicators({name: "svg"}) // add indicators (requires plugin)
                 //.setClassToggle("#sec1", "activo")
@@ -143,7 +140,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         //console.log("Scene: " +event.state);
         //console.log("scrollDirection: " +event.scrollDirection);
              if(event.state=='BEFORE'){
-                myVivus.play(-1);
+                //myVivus.play(-1);
                // subraya("sec1");
             }
         
@@ -152,13 +149,14 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
         scene3.on("enter", function (event) {
         //console.log("Scene entered.");
-            myVivus.play();
+            //myVivus.play();
             //subraya("sec2");
         });
 
         if(isMobile.any()){
               scene3.triggerHook(0.6);
         }
+        */
       
 
 
@@ -185,7 +183,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 
      
-       var myIcons = new SVGMorpheus('#svg1-icon');
+       //var myIcons = new SVGMorpheus('#svg1-icon');
       //  myIcons.to('svg1-menu', {duration: 3000});
         
        
@@ -193,10 +191,10 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         $('#menu-movil-click').on('click touch', function(event) {
             if(menuClick==0){
                 menuClick=1;
-                myIcons.to('svg1-menu-cerrar', {duration: 300});
+               // myIcons.to('svg1-menu-cerrar', {duration: 300});
             }else{
                 menuClick=0;
-                 myIcons.to('svg1-menu', {duration: 300});
+                 //myIcons.to('svg1-menu', {duration: 300});
             }
           
         });
@@ -215,19 +213,19 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
     if(!isMobile.any()){
 
         /*----------  Si no es un móvil, si es escritorio ----------*/
+        /*
 
-
-        var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        var controllerParallax = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         var es_1 =  new ScrollMagic.Scene({triggerElement: "#parallax1"})
-                        .setTween("#parallax1 > div", {y: "70%", ease: Linear.easeNone})
+                        .setTween($(".imagenParallax"), {y: "80%", ease: Linear.easeNone})
                         //.addIndicators({name: "home parallax 1"})
-                          .setClassToggle("#sec2", "activo")
-                        .addTo(controller_p1);
+                        //  .setClassToggle("#sec2", "activo")
+                        .addTo(controllerParallax);
+
+    
 
 
-
-
-
+/*
         var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "240%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "50%",ease: Linear.easeNone})
@@ -273,7 +271,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         //.addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
-
+*/
                         /*
 
               var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "150%"}});
@@ -285,6 +283,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
                         */
 
     }else{
+        /*
 
          var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
@@ -334,7 +333,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         //.addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
-
+/*
                         /*
 
          var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
@@ -363,6 +362,40 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         }
 
 
+
+
+
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 500}});
+
+    // build scenes
+    new ScrollMagic.Scene({triggerElement: "#bloque-home"})
+                    .setClassToggle("#sec1", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#bloque-nosotros"})
+                    .setClassToggle("#sec2", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#bloque-membresias"})
+                    .setClassToggle("#sec3", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#sec-menu"})
+                    .setClassToggle("#sec4", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec-servicios"})
+                    .setClassToggle("#sec5", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec-citas"})
+                    .setClassToggle("#sec6", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+
+
+
+  
     /*----------  Foundation  ----------*/
     $(document).foundation();
 
@@ -384,26 +417,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 /*----------  Funciones globales  ----------*/
 
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
+
 
 function updateBox (e) {
     if (e.type == "enter") {

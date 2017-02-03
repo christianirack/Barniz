@@ -12,10 +12,52 @@ html, body{
 	padding: 0px;
 	border: 0px;
 }
+.bold{
+	font-weight: bold !important;
+}
+.hr{
+	border-bottom: 1px solid $colorGrisClaro !important;
+	height:2px;
+	width:100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.naranja{
+	color: $colorNaranja !important;
+
+}
+.negro{
+	color: $colorNegro !important;
+
+}
+.marron{
+	color: $colorMarron !important;
+
+}
+.gris{
+	color: $colorGris !important;
+}
+.submenu{
+	position:relative; z-index:999964; width:100%;
+}
+.submenu2{
+	position:relative; z-index:999965; width:100%;
+}
+.row-center{
+	margin: 0px auto !important;
+}
 .button {
 	background-color: $colorNaranja !important;
 	color: $colorBlanco !important;
 	
+}
+.morado{
+	background-color:$colorMorado !important;;
+	color:$colorBlanco !important;
+	padding:20px;
+}
+.morado h1, .morado h2, .morado h3, .morado label{
+	color:$colorBlanco !important;
 }
 .input-group-button{
 	text-align: left !important;

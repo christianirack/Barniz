@@ -25460,13 +25460,6 @@ else if (typeof define === 'function' && define.amd) {
 }
 //# sourceMappingURL=maps/swiper.js.map
 
-/**
- * vivus - JavaScript library to make drawing animation on SVG
- * @version v0.4.0
- * @link https://github.com/maxwellito/vivus
- * @license MIT
- */
-"use strict";!function(t,e){function r(r){if("undefined"==typeof r)throw new Error('Pathformer [constructor]: "element" parameter is required');if(r.constructor===String&&(r=e.getElementById(r),!r))throw new Error('Pathformer [constructor]: "element" parameter is not related to an existing ID');if(!(r.constructor instanceof t.SVGElement||/^svg$/i.test(r.nodeName)))throw new Error('Pathformer [constructor]: "element" parameter must be a string or a SVGelement');this.el=r,this.scan(r)}function n(t,e,r){this.isReady=!1,this.setElement(t,e),this.setOptions(e),this.setCallback(r),this.isReady&&this.init()}r.prototype.TYPES=["line","ellipse","circle","polygon","polyline","rect"],r.prototype.ATTR_WATCH=["cx","cy","points","r","rx","ry","x","x1","x2","y","y1","y2"],r.prototype.scan=function(t){for(var e,r,n,i,a=t.querySelectorAll(this.TYPES.join(",")),s=0;s<a.length;s++)r=a[s],e=this[r.tagName.toLowerCase()+"ToPath"],n=e(this.parseAttr(r.attributes)),i=this.pathMaker(r,n),r.parentNode.replaceChild(i,r)},r.prototype.lineToPath=function(t){var e={},r=t.x1||0,n=t.y1||0,i=t.x2||0,a=t.y2||0;return e.d="M"+r+","+n+"L"+i+","+a,e},r.prototype.rectToPath=function(t){var e={},r=parseFloat(t.x)||0,n=parseFloat(t.y)||0,i=parseFloat(t.width)||0,a=parseFloat(t.height)||0;return e.d="M"+r+" "+n+" ",e.d+="L"+(r+i)+" "+n+" ",e.d+="L"+(r+i)+" "+(n+a)+" ",e.d+="L"+r+" "+(n+a)+" Z",e},r.prototype.polylineToPath=function(t){var e,r,n={},i=t.points.trim().split(" ");if(-1===t.points.indexOf(",")){var a=[];for(e=0;e<i.length;e+=2)a.push(i[e]+","+i[e+1]);i=a}for(r="M"+i[0],e=1;e<i.length;e++)-1!==i[e].indexOf(",")&&(r+="L"+i[e]);return n.d=r,n},r.prototype.polygonToPath=function(t){var e=r.prototype.polylineToPath(t);return e.d+="Z",e},r.prototype.ellipseToPath=function(t){var e={},r=parseFloat(t.rx)||0,n=parseFloat(t.ry)||0,i=parseFloat(t.cx)||0,a=parseFloat(t.cy)||0,s=i-r,o=a,h=parseFloat(i)+parseFloat(r),l=a;return e.d="M"+s+","+o+"A"+r+","+n+" 0,1,1 "+h+","+l+"A"+r+","+n+" 0,1,1 "+s+","+l,e},r.prototype.circleToPath=function(t){var e={},r=parseFloat(t.r)||0,n=parseFloat(t.cx)||0,i=parseFloat(t.cy)||0,a=n-r,s=i,o=parseFloat(n)+parseFloat(r),h=i;return e.d="M"+a+","+s+"A"+r+","+r+" 0,1,1 "+o+","+h+"A"+r+","+r+" 0,1,1 "+a+","+h,e},r.prototype.pathMaker=function(t,r){var n,i,a=e.createElementNS("http://www.w3.org/2000/svg","path");for(n=0;n<t.attributes.length;n++)i=t.attributes[n],-1===this.ATTR_WATCH.indexOf(i.name)&&a.setAttribute(i.name,i.value);for(n in r)a.setAttribute(n,r[n]);return a},r.prototype.parseAttr=function(t){for(var e,r={},n=0;n<t.length;n++){if(e=t[n],-1!==this.ATTR_WATCH.indexOf(e.name)&&-1!==e.value.indexOf("%"))throw new Error("Pathformer [parseAttr]: a SVG shape got values in percentage. This cannot be transformed into 'path' tags. Please use 'viewBox'.");r[e.name]=e.value}return r};var i,a,s;n.LINEAR=function(t){return t},n.EASE=function(t){return-Math.cos(t*Math.PI)/2+.5},n.EASE_OUT=function(t){return 1-Math.pow(1-t,3)},n.EASE_IN=function(t){return Math.pow(t,3)},n.EASE_OUT_BOUNCE=function(t){var e=-Math.cos(.5*t*Math.PI)+1,r=Math.pow(e,1.5),n=Math.pow(1-t,2),i=-Math.abs(Math.cos(2.5*r*Math.PI))+1;return 1-n+i*n},n.prototype.setElement=function(r,n){if("undefined"==typeof r)throw new Error('Vivus [constructor]: "element" parameter is required');if(r.constructor===String&&(r=e.getElementById(r),!r))throw new Error('Vivus [constructor]: "element" parameter is not related to an existing ID');if(this.parentEl=r,n&&n.file){var i=e.createElement("object");i.setAttribute("type","image/svg+xml"),i.setAttribute("data",n.file),i.setAttribute("built-by-vivus","true"),r.appendChild(i),r=i}switch(r.constructor){case t.SVGSVGElement:case t.SVGElement:this.el=r,this.isReady=!0;break;case t.HTMLObjectElement:var a,s;s=this,a=function(t){if(!s.isReady){if(s.el=r.contentDocument&&r.contentDocument.querySelector("svg"),!s.el&&t)throw new Error("Vivus [constructor]: object loaded does not contain any SVG");return s.el?(r.getAttribute("built-by-vivus")&&(s.parentEl.insertBefore(s.el,r),s.parentEl.removeChild(r),s.el.setAttribute("width","100%"),s.el.setAttribute("height","100%")),s.isReady=!0,s.init(),!0):void 0}},a()||r.addEventListener("load",a);break;default:throw new Error('Vivus [constructor]: "element" parameter is not valid (or miss the "file" attribute)')}},n.prototype.setOptions=function(e){var r=["delayed","sync","async","nsync","oneByOne","scenario","scenario-sync"],i=["inViewport","manual","autostart"];if(void 0!==e&&e.constructor!==Object)throw new Error('Vivus [constructor]: "options" parameter must be an object');if(e=e||{},e.type&&-1===r.indexOf(e.type))throw new Error("Vivus [constructor]: "+e.type+" is not an existing animation `type`");if(this.type=e.type||r[0],e.start&&-1===i.indexOf(e.start))throw new Error("Vivus [constructor]: "+e.start+" is not an existing `start` option");if(this.start=e.start||i[0],this.isIE=-1!==t.navigator.userAgent.indexOf("MSIE")||-1!==t.navigator.userAgent.indexOf("Trident/")||-1!==t.navigator.userAgent.indexOf("Edge/"),this.duration=s(e.duration,120),this.delay=s(e.delay,null),this.dashGap=s(e.dashGap,1),this.forceRender=e.hasOwnProperty("forceRender")?!!e.forceRender:this.isIE,this.reverseStack=!!e.reverseStack,this.selfDestroy=!!e.selfDestroy,this.onReady=e.onReady,this.map=[],this.frameLength=this.currentFrame=this.delayUnit=this.speed=this.handle=null,this.ignoreInvisible=e.hasOwnProperty("ignoreInvisible")?!!e.ignoreInvisible:!1,this.animTimingFunction=e.animTimingFunction||n.LINEAR,this.pathTimingFunction=e.pathTimingFunction||n.LINEAR,this.delay>=this.duration)throw new Error("Vivus [constructor]: delay must be shorter than duration")},n.prototype.setCallback=function(t){if(t&&t.constructor!==Function)throw new Error('Vivus [constructor]: "callback" parameter must be a function');this.callback=t||function(){}},n.prototype.mapping=function(){var e,r,n,i,a,o,h,l;for(l=o=h=0,r=this.el.querySelectorAll("path"),e=0;e<r.length;e++)n=r[e],this.isInvisible(n)||(a={el:n,length:Math.ceil(n.getTotalLength())},isNaN(a.length)?t.console&&console.warn&&console.warn("Vivus [mapping]: cannot retrieve a path element length",n):(this.map.push(a),n.style.strokeDasharray=a.length+" "+(a.length+2*this.dashGap),n.style.strokeDashoffset=a.length+this.dashGap,a.length+=this.dashGap,o+=a.length,this.renderPath(e)));for(o=0===o?1:o,this.delay=null===this.delay?this.duration/3:this.delay,this.delayUnit=this.delay/(r.length>1?r.length-1:1),this.reverseStack&&this.map.reverse(),e=0;e<this.map.length;e++){switch(a=this.map[e],this.type){case"delayed":a.startAt=this.delayUnit*e,a.duration=this.duration-this.delay;break;case"oneByOne":a.startAt=h/o*this.duration,a.duration=a.length/o*this.duration;break;case"sync":case"async":case"nsync":a.startAt=0,a.duration=this.duration;break;case"scenario-sync":n=a.el,i=this.parseAttr(n),a.startAt=l+(s(i["data-delay"],this.delayUnit)||0),a.duration=s(i["data-duration"],this.duration),l=void 0!==i["data-async"]?a.startAt:a.startAt+a.duration,this.frameLength=Math.max(this.frameLength,a.startAt+a.duration);break;case"scenario":n=a.el,i=this.parseAttr(n),a.startAt=s(i["data-start"],this.delayUnit)||0,a.duration=s(i["data-duration"],this.duration),this.frameLength=Math.max(this.frameLength,a.startAt+a.duration)}h+=a.length,this.frameLength=this.frameLength||this.duration}},n.prototype.drawer=function(){var t=this;if(this.currentFrame+=this.speed,this.currentFrame<=0)this.stop(),this.reset();else{if(!(this.currentFrame>=this.frameLength))return this.trace(),this.handle=i(function(){t.drawer()}),void 0;this.stop(),this.currentFrame=this.frameLength,this.trace(),this.selfDestroy&&this.destroy()}this.callback(this),this.instanceCallback&&(this.instanceCallback(this),this.instanceCallback=null)},n.prototype.trace=function(){var t,e,r,n;for(n=this.animTimingFunction(this.currentFrame/this.frameLength)*this.frameLength,t=0;t<this.map.length;t++)r=this.map[t],e=(n-r.startAt)/r.duration,e=this.pathTimingFunction(Math.max(0,Math.min(1,e))),r.progress!==e&&(r.progress=e,r.el.style.strokeDashoffset=Math.floor(r.length*(1-e)),this.renderPath(t))},n.prototype.renderPath=function(t){if(this.forceRender&&this.map&&this.map[t]){var e=this.map[t],r=e.el.cloneNode(!0);e.el.parentNode.replaceChild(r,e.el),e.el=r}},n.prototype.init=function(){this.frameLength=0,this.currentFrame=0,this.map=[],new r(this.el),this.mapping(),this.starter(),this.onReady&&this.onReady(this)},n.prototype.starter=function(){switch(this.start){case"manual":return;case"autostart":this.play();break;case"inViewport":var e=this,r=function(){e.isInViewport(e.parentEl,1)&&(e.play(),t.removeEventListener("scroll",r))};t.addEventListener("scroll",r),r()}},n.prototype.getStatus=function(){return 0===this.currentFrame?"start":this.currentFrame===this.frameLength?"end":"progress"},n.prototype.reset=function(){return this.setFrameProgress(0)},n.prototype.finish=function(){return this.setFrameProgress(1)},n.prototype.setFrameProgress=function(t){return t=Math.min(1,Math.max(0,t)),this.currentFrame=Math.round(this.frameLength*t),this.trace(),this},n.prototype.play=function(t,e){if(this.instanceCallback=null,t&&"function"==typeof t)this.instanceCallback=t,t=null;else if(t&&"number"!=typeof t)throw new Error("Vivus [play]: invalid speed");return e&&"function"==typeof e&&!this.instanceCallback&&(this.instanceCallback=e),this.speed=t||1,this.handle||this.drawer(),this},n.prototype.stop=function(){return this.handle&&(a(this.handle),this.handle=null),this},n.prototype.destroy=function(){this.stop();var t,e;for(t=0;t<this.map.length;t++)e=this.map[t],e.el.style.strokeDashoffset=null,e.el.style.strokeDasharray=null,this.renderPath(t)},n.prototype.isInvisible=function(t){var e,r=t.getAttribute("data-ignore");return null!==r?"false"!==r:this.ignoreInvisible?(e=t.getBoundingClientRect(),!e.width&&!e.height):!1},n.prototype.parseAttr=function(t){var e,r={};if(t&&t.attributes)for(var n=0;n<t.attributes.length;n++)e=t.attributes[n],r[e.name]=e.value;return r},n.prototype.isInViewport=function(t,e){var r=this.scrollY(),n=r+this.getViewportH(),i=t.getBoundingClientRect(),a=i.height,s=r+i.top,o=s+a;return e=e||0,n>=s+a*e&&o>=r},n.prototype.docElem=t.document.documentElement,n.prototype.getViewportH=function(){var e=this.docElem.clientHeight,r=t.innerHeight;return r>e?r:e},n.prototype.scrollY=function(){return t.pageYOffset||this.docElem.scrollTop},i=function(){return t.requestAnimationFrame||t.webkitRequestAnimationFrame||t.mozRequestAnimationFrame||t.oRequestAnimationFrame||t.msRequestAnimationFrame||function(e){return t.setTimeout(e,1e3/60)}}(),a=function(){return t.cancelAnimationFrame||t.webkitCancelAnimationFrame||t.mozCancelAnimationFrame||t.oCancelAnimationFrame||t.msCancelAnimationFrame||function(e){return t.clearTimeout(e)}}(),s=function(t,e){var r=parseInt(t,10);return r>=0?r:e},"function"==typeof define&&define.amd?define([],function(){return n}):"object"==typeof exports?module.exports=n:t.Vivus=n}(window,document);
 /*!
  * VERSION: 1.19.1
  * DATE: 2017-01-17
@@ -36776,316 +36769,6 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 	};
 
 }));
-/*!
- * ScrollMagic v2.0.5 (2015-04-29)
- * The javascript library for magical scroll interactions.
- * (c) 2015 Jan Paepke (@janpaepke)
- * Project Website: http://scrollmagic.io
- * 
- * @version 2.0.5
- * @license Dual licensed under MIT license and GPL.
- * @author Jan Paepke - e-mail@janpaepke.de
- *
- * @file ScrollMagic GSAP Animation Plugin.
- *
- * requires: GSAP ~1.14
- * Powered by the Greensock Animation Platform (GSAP): http://www.greensock.com/js
- * Greensock License info at http://www.greensock.com/licensing/
- */
-/**
- * This plugin is meant to be used in conjunction with the Greensock Animation Plattform.  
- * It offers an easy API to trigger Tweens or synchronize them to the scrollbar movement.
- *
- * Both the `lite` and the `max` versions of the GSAP library are supported.  
- * The most basic requirement is `TweenLite`.
- * 
- * To have access to this extension, please include `plugins/animation.gsap.js`.
- * @requires {@link http://greensock.com/gsap|GSAP ~1.14.x}
- * @mixin animation.GSAP
- */
-(function (root, factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD. Register as an anonymous module.
-		define(['ScrollMagic', 'TweenMax', 'TimelineMax'], factory);
-	} else if (typeof exports === 'object') {
-		// CommonJS
-		// Loads whole gsap package onto global scope.
-		require('gsap');
-		factory(require('scrollmagic'), TweenMax, TimelineMax);
-	} else {
-		// Browser globals
-		factory(root.ScrollMagic || (root.jQuery && root.jQuery.ScrollMagic), root.TweenMax || root.TweenLite, root.TimelineMax || root.TimelineLite);
-	}
-}(this, function (ScrollMagic, Tween, Timeline) {
-	"use strict";
-	var NAMESPACE = "animation.gsap";
-
-	var
-	console = window.console || {},
-		err = Function.prototype.bind.call(console.error || console.log ||
-		function () {}, console);
-	if (!ScrollMagic) {
-		err("(" + NAMESPACE + ") -> ERROR: The ScrollMagic main module could not be found. Please make sure it's loaded before this plugin or use an asynchronous loader like requirejs.");
-	}
-	if (!Tween) {
-		err("(" + NAMESPACE + ") -> ERROR: TweenLite or TweenMax could not be found. Please make sure GSAP is loaded before ScrollMagic or use an asynchronous loader like requirejs.");
-	}
-
-/*
-	 * ----------------------------------------------------------------
-	 * Extensions for Scene
-	 * ----------------------------------------------------------------
-	 */
-	/**
-	 * Every instance of ScrollMagic.Scene now accepts an additional option.  
-	 * See {@link ScrollMagic.Scene} for a complete list of the standard options.
-	 * @memberof! animation.GSAP#
-	 * @method new ScrollMagic.Scene(options)
-	 * @example
-	 * var scene = new ScrollMagic.Scene({tweenChanges: true});
-	 *
-	 * @param {object} [options] - Options for the Scene. The options can be updated at any time.
-	 * @param {boolean} [options.tweenChanges=false] - Tweens Animation to the progress target instead of setting it.  
-	 Does not affect animations where duration is `0`.
-	 */
-	/**
-	 * **Get** or **Set** the tweenChanges option value.  
-	 * This only affects scenes with a duration. If `tweenChanges` is `true`, the progress update when scrolling will not be immediate, but instead the animation will smoothly animate to the target state.  
-	 * For a better understanding, try enabling and disabling this option in the [Scene Manipulation Example](../examples/basic/scene_manipulation.html).
-	 * @memberof! animation.GSAP#
-	 * @method Scene.tweenChanges
-	 * 
-	 * @example
-	 * // get the current tweenChanges option
-	 * var tweenChanges = scene.tweenChanges();
-	 *
-	 * // set new tweenChanges option
-	 * scene.tweenChanges(true);
-	 *
-	 * @fires {@link Scene.change}, when used as setter
-	 * @param {boolean} [newTweenChanges] - The new tweenChanges setting of the scene.
-	 * @returns {boolean} `get` -  Current tweenChanges option value.
-	 * @returns {Scene} `set` -  Parent object for chaining.
-	 */
-	// add option (TODO: DOC (private for dev))
-	ScrollMagic.Scene.addOption("tweenChanges", // name
-	false, // default
-
-
-	function (val) { // validation callback
-		return !!val;
-	});
-	// extend scene
-	ScrollMagic.Scene.extend(function () {
-		var Scene = this,
-			_tween;
-
-		var log = function () {
-			if (Scene._log) { // not available, when main source minified
-				Array.prototype.splice.call(arguments, 1, 0, "(" + NAMESPACE + ")", "->");
-				Scene._log.apply(this, arguments);
-			}
-		};
-
-		// set listeners
-		Scene.on("progress.plugin_gsap", function () {
-			updateTweenProgress();
-		});
-		Scene.on("destroy.plugin_gsap", function (e) {
-			Scene.removeTween(e.reset);
-		});
-
-		/**
-		 * Update the tween progress to current position.
-		 * @private
-		 */
-		var updateTweenProgress = function () {
-			if (_tween) {
-				var
-				progress = Scene.progress(),
-					state = Scene.state();
-				if (_tween.repeat && _tween.repeat() === -1) {
-					// infinite loop, so not in relation to progress
-					if (state === 'DURING' && _tween.paused()) {
-						_tween.play();
-					} else if (state !== 'DURING' && !_tween.paused()) {
-						_tween.pause();
-					}
-				} else if (progress != _tween.progress()) { // do we even need to update the progress?
-					// no infinite loop - so should we just play or go to a specific point in time?
-					if (Scene.duration() === 0) {
-						// play the animation
-						if (progress > 0) { // play from 0 to 1
-							_tween.play();
-						} else { // play from 1 to 0
-							_tween.reverse();
-						}
-					} else {
-						// go to a specific point in time
-						if (Scene.tweenChanges() && _tween.tweenTo) {
-							// go smooth
-							_tween.tweenTo(progress * _tween.duration());
-						} else {
-							// just hard set it
-							_tween.progress(progress).pause();
-						}
-					}
-				}
-			}
-		};
-
-		/**
-		 * Add a tween to the scene.  
-		 * If you want to add multiple tweens, add them into a GSAP Timeline object and supply it instead (see example below).  
-		 * 
-		 * If the scene has a duration, the tween's duration will be projected to the scroll distance of the scene, meaning its progress will be synced to scrollbar movement.  
-		 * For a scene with a duration of `0`, the tween will be triggered when scrolling forward past the scene's trigger position and reversed, when scrolling back.  
-		 * To gain better understanding, check out the [Simple Tweening example](../examples/basic/simple_tweening.html).
-		 *
-		 * Instead of supplying a tween this method can also be used as a shorthand for `TweenMax.to()` (see example below).
-		 * @memberof! animation.GSAP#
-		 *
-		 * @example
-		 * // add a single tween directly
-		 * scene.setTween(TweenMax.to("obj"), 1, {x: 100});
-		 *
-		 * // add a single tween via variable
-		 * var tween = TweenMax.to("obj"), 1, {x: 100};
-		 * scene.setTween(tween);
-		 *
-		 * // add multiple tweens, wrapped in a timeline.
-		 * var timeline = new TimelineMax();
-		 * var tween1 = TweenMax.from("obj1", 1, {x: 100});
-		 * var tween2 = TweenMax.to("obj2", 1, {y: 100});
-		 * timeline
-		 *		.add(tween1)
-		 *		.add(tween2);
-		 * scene.addTween(timeline);
-		 *
-		 * // short hand to add a TweenMax.to() tween
-		 * scene.setTween("obj3", 0.5, {y: 100});
-		 *
-		 * // short hand to add a TweenMax.to() tween for 1 second
-		 * // this is useful, when the scene has a duration and the tween duration isn't important anyway
-		 * scene.setTween("obj3", {y: 100});
-		 *
-		 * @param {(object|string)} TweenObject - A TweenMax, TweenLite, TimelineMax or TimelineLite object that should be animated in the scene. Can also be a Dom Element or Selector, when using direct tween definition (see examples).
-		 * @param {(number|object)} duration - A duration for the tween, or tween parameters. If an object containing parameters are supplied, a default duration of 1 will be used.
-		 * @param {object} params - The parameters for the tween
-		 * @returns {Scene} Parent object for chaining.
-		 */
-		Scene.setTween = function (TweenObject, duration, params) {
-			var newTween;
-			if (arguments.length > 1) {
-				if (arguments.length < 3) {
-					params = duration;
-					duration = 1;
-				}
-				TweenObject = Tween.to(TweenObject, duration, params);
-			}
-			try {
-				// wrap Tween into a Timeline Object if available to include delay and repeats in the duration and standardize methods.
-				if (Timeline) {
-					newTween = new Timeline({
-						smoothChildTiming: true
-					}).add(TweenObject);
-				} else {
-					newTween = TweenObject;
-				}
-				newTween.pause();
-			} catch (e) {
-				log(1, "ERROR calling method 'setTween()': Supplied argument is not a valid TweenObject");
-				return Scene;
-			}
-			if (_tween) { // kill old tween?
-				Scene.removeTween();
-			}
-			_tween = newTween;
-
-			// some properties need to be transferred it to the wrapper, otherwise they would get lost.
-			if (TweenObject.repeat && TweenObject.repeat() === -1) { // TweenMax or TimelineMax Object?
-				_tween.repeat(-1);
-				_tween.yoyo(TweenObject.yoyo());
-			}
-			// Some tween validations and debugging helpers
-			if (Scene.tweenChanges() && !_tween.tweenTo) {
-				log(2, "WARNING: tweenChanges will only work if the TimelineMax object is available for ScrollMagic.");
-			}
-
-			// check if there are position tweens defined for the trigger and warn about it :)
-			if (_tween && Scene.controller() && Scene.triggerElement() && Scene.loglevel() >= 2) { // controller is needed to know scroll direction.
-				var
-				triggerTweens = Tween.getTweensOf(Scene.triggerElement()),
-					vertical = Scene.controller().info("vertical");
-				triggerTweens.forEach(function (value, index) {
-					var
-					tweenvars = value.vars.css || value.vars,
-						condition = vertical ? (tweenvars.top !== undefined || tweenvars.bottom !== undefined) : (tweenvars.left !== undefined || tweenvars.right !== undefined);
-					if (condition) {
-						log(2, "WARNING: Tweening the position of the trigger element affects the scene timing and should be avoided!");
-						return false;
-					}
-				});
-			}
-
-			// warn about tween overwrites, when an element is tweened multiple times
-			if (parseFloat(TweenLite.version) >= 1.14) { // onOverwrite only present since GSAP v1.14.0
-				var
-				list = _tween.getChildren ? _tween.getChildren(true, true, false) : [_tween],
-					// get all nested tween objects
-					newCallback = function () {
-						log(2, "WARNING: tween was overwritten by another. To learn how to avoid this issue see here: https://github.com/janpaepke/ScrollMagic/wiki/WARNING:-tween-was-overwritten-by-another");
-					};
-				for (var i = 0, thisTween, oldCallback; i < list.length; i++) { /*jshint loopfunc: true */
-					thisTween = list[i];
-					if (oldCallback !== newCallback) { // if tweens is added more than once
-						oldCallback = thisTween.vars.onOverwrite;
-						thisTween.vars.onOverwrite = function () {
-							if (oldCallback) {
-								oldCallback.apply(this, arguments);
-							}
-							newCallback.apply(this, arguments);
-						};
-					}
-				}
-			}
-			log(3, "added tween");
-
-			updateTweenProgress();
-			return Scene;
-		};
-
-		/**
-		 * Remove the tween from the scene.  
-		 * This will terminate the control of the Scene over the tween.
-		 *
-		 * Using the reset option you can decide if the tween should remain in the current state or be rewound to set the target elements back to the state they were in before the tween was added to the scene.
-		 * @memberof! animation.GSAP#
-		 *
-		 * @example
-		 * // remove the tween from the scene without resetting it
-		 * scene.removeTween();
-		 *
-		 * // remove the tween from the scene and reset it to initial position
-		 * scene.removeTween(true);
-		 *
-		 * @param {boolean} [reset=false] - If `true` the tween will be reset to its initial values.
-		 * @returns {Scene} Parent object for chaining.
-		 */
-		Scene.removeTween = function (reset) {
-			if (_tween) {
-				if (reset) {
-					_tween.progress(0).pause();
-				}
-				_tween.kill();
-				_tween = undefined;
-				log(3, "removed tween (reset: " + (reset ? "true" : "false") + ")");
-			}
-			return Scene;
-		};
-
-	});
-}));
 /* =========================================================
  * foundation-datepicker.js
  * Copyright 2015 Peter Beno, najlepsiwebdesigner@gmail.com, @benopeter
@@ -38504,6 +38187,411 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 
 }(window.jQuery);
 
+/*!
+ * parallax.js v1.4.2 (http://pixelcog.github.io/parallax.js/)
+ * @copyright 2016 PixelCog, Inc.
+ * @license MIT (https://github.com/pixelcog/parallax.js/blob/master/LICENSE)
+ */
+
+;(function ( $, window, document, undefined ) {
+
+  // Polyfill for requestAnimationFrame
+  // via: https://gist.github.com/paulirish/1579671
+
+  (function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+      window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
+        || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+      window.requestAnimationFrame = function(callback) {
+        var currTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+          timeToCall);
+        lastTime = currTime + timeToCall;
+        return id;
+      };
+
+    if (!window.cancelAnimationFrame)
+      window.cancelAnimationFrame = function(id) {
+        clearTimeout(id);
+      };
+  }());
+
+
+  // Parallax Constructor
+
+  function Parallax(element, options) {
+    var self = this;
+
+    if (typeof options == 'object') {
+      delete options.refresh;
+      delete options.render;
+      $.extend(this, options);
+    }
+
+    this.$element = $(element);
+
+    if (!this.imageSrc && this.$element.is('img')) {
+      this.imageSrc = this.$element.attr('src');
+    }
+
+    var positions = (this.position + '').toLowerCase().match(/\S+/g) || [];
+
+    if (positions.length < 1) {
+      positions.push('center');
+    }
+    if (positions.length == 1) {
+      positions.push(positions[0]);
+    }
+
+    if (positions[0] == 'top' || positions[0] == 'bottom' || positions[1] == 'left' || positions[1] == 'right') {
+      positions = [positions[1], positions[0]];
+    }
+
+    if (this.positionX != undefined) positions[0] = this.positionX.toLowerCase();
+    if (this.positionY != undefined) positions[1] = this.positionY.toLowerCase();
+
+    self.positionX = positions[0];
+    self.positionY = positions[1];
+
+    if (this.positionX != 'left' && this.positionX != 'right') {
+      if (isNaN(parseInt(this.positionX))) {
+        this.positionX = 'center';
+      } else {
+        this.positionX = parseInt(this.positionX);
+      }
+    }
+
+    if (this.positionY != 'top' && this.positionY != 'bottom') {
+      if (isNaN(parseInt(this.positionY))) {
+        this.positionY = 'center';
+      } else {
+        this.positionY = parseInt(this.positionY);
+      }
+    }
+
+    this.position =
+      this.positionX + (isNaN(this.positionX)? '' : 'px') + ' ' +
+      this.positionY + (isNaN(this.positionY)? '' : 'px');
+
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+      if (this.imageSrc && this.iosFix && !this.$element.is('img')) {
+        this.$element.css({
+          backgroundImage: 'url(' + this.imageSrc + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: this.position
+        });
+      }
+      return this;
+    }
+
+    if (navigator.userAgent.match(/(Android)/)) {
+      if (this.imageSrc && this.androidFix && !this.$element.is('img')) {
+        this.$element.css({
+          backgroundImage: 'url(' + this.imageSrc + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: this.position
+        });
+      }
+      return this;
+    }
+
+    this.$mirror = $('<div />').prependTo('body');
+
+    var slider = this.$element.find('>.parallax-slider');
+    var sliderExisted = false;
+
+    if (slider.length == 0)
+      this.$slider = $('<img />').prependTo(this.$mirror);
+    else {
+      this.$slider = slider.prependTo(this.$mirror)
+      sliderExisted = true;
+    }
+
+    this.$mirror.addClass('parallax-mirror').css({
+      visibility: 'hidden',
+      zIndex: this.zIndex,
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      overflow: 'hidden'
+    });
+
+    this.$slider.addClass('parallax-slider').one('load', function() {
+      if (!self.naturalHeight || !self.naturalWidth) {
+        self.naturalHeight = this.naturalHeight || this.height || 1;
+        self.naturalWidth  = this.naturalWidth  || this.width  || 1;
+      }
+      self.aspectRatio = self.naturalWidth / self.naturalHeight;
+
+      Parallax.isSetup || Parallax.setup();
+      Parallax.sliders.push(self);
+      Parallax.isFresh = false;
+      Parallax.requestRender();
+    });
+
+    if (!sliderExisted)
+      this.$slider[0].src = this.imageSrc;
+
+    if (this.naturalHeight && this.naturalWidth || this.$slider[0].complete || slider.length > 0) {
+      this.$slider.trigger('load');
+    }
+
+  };
+
+
+  // Parallax Instance Methods
+
+  $.extend(Parallax.prototype, {
+    speed:    0.2,
+    bleed:    0,
+    zIndex:   -100,
+    iosFix:   true,
+    androidFix: true,
+    position: 'center',
+    overScrollFix: false,
+
+    refresh: function() {
+      this.boxWidth        = this.$element.outerWidth();
+      this.boxHeight       = this.$element.outerHeight() + this.bleed * 2;
+      this.boxOffsetTop    = this.$element.offset().top - this.bleed;
+      this.boxOffsetLeft   = this.$element.offset().left;
+      this.boxOffsetBottom = this.boxOffsetTop + this.boxHeight;
+
+      var winHeight = Parallax.winHeight;
+      var docHeight = Parallax.docHeight;
+      var maxOffset = Math.min(this.boxOffsetTop, docHeight - winHeight);
+      var minOffset = Math.max(this.boxOffsetTop + this.boxHeight - winHeight, 0);
+      var imageHeightMin = this.boxHeight + (maxOffset - minOffset) * (1 - this.speed) | 0;
+      var imageOffsetMin = (this.boxOffsetTop - maxOffset) * (1 - this.speed) | 0;
+
+      if (imageHeightMin * this.aspectRatio >= this.boxWidth) {
+        this.imageWidth    = imageHeightMin * this.aspectRatio | 0;
+        this.imageHeight   = imageHeightMin;
+        this.offsetBaseTop = imageOffsetMin;
+
+        var margin = this.imageWidth - this.boxWidth;
+
+        if (this.positionX == 'left') {
+          this.offsetLeft = 0;
+        } else if (this.positionX == 'right') {
+          this.offsetLeft = - margin;
+        } else if (!isNaN(this.positionX)) {
+          this.offsetLeft = Math.max(this.positionX, - margin);
+        } else {
+          this.offsetLeft = - margin / 2 | 0;
+        }
+      } else {
+        this.imageWidth    = this.boxWidth;
+        this.imageHeight   = this.boxWidth / this.aspectRatio | 0;
+        this.offsetLeft    = 0;
+
+        var margin = this.imageHeight - imageHeightMin;
+
+        if (this.positionY == 'top') {
+          this.offsetBaseTop = imageOffsetMin;
+        } else if (this.positionY == 'bottom') {
+          this.offsetBaseTop = imageOffsetMin - margin;
+        } else if (!isNaN(this.positionY)) {
+          this.offsetBaseTop = imageOffsetMin + Math.max(this.positionY, - margin);
+        } else {
+          this.offsetBaseTop = imageOffsetMin - margin / 2 | 0;
+        }
+      }
+    },
+
+    render: function() {
+      var scrollTop    = Parallax.scrollTop;
+      var scrollLeft   = Parallax.scrollLeft;
+      var overScroll   = this.overScrollFix ? Parallax.overScroll : 0;
+      var scrollBottom = scrollTop + Parallax.winHeight;
+
+      if (this.boxOffsetBottom > scrollTop && this.boxOffsetTop <= scrollBottom) {
+        this.visibility = 'visible';
+        this.mirrorTop = this.boxOffsetTop  - scrollTop;
+        this.mirrorLeft = this.boxOffsetLeft - scrollLeft;
+        this.offsetTop = this.offsetBaseTop - this.mirrorTop * (1 - this.speed);
+      } else {
+        this.visibility = 'hidden';
+      }
+
+      this.$mirror.css({
+        transform: 'translate3d(0px, 0px, 0px)',
+        visibility: this.visibility,
+        top: this.mirrorTop - overScroll,
+        left: this.mirrorLeft,
+        height: this.boxHeight,
+        width: this.boxWidth
+      });
+
+      this.$slider.css({
+        transform: 'translate3d(0px, 0px, 0px)',
+        position: 'absolute',
+        top: this.offsetTop,
+        left: this.offsetLeft,
+        height: this.imageHeight,
+        width: this.imageWidth,
+        maxWidth: 'none'
+      });
+    }
+  });
+
+
+  // Parallax Static Methods
+
+  $.extend(Parallax, {
+    scrollTop:    0,
+    scrollLeft:   0,
+    winHeight:    0,
+    winWidth:     0,
+    docHeight:    1 << 30,
+    docWidth:     1 << 30,
+    sliders:      [],
+    isReady:      false,
+    isFresh:      false,
+    isBusy:       false,
+
+    setup: function() {
+      if (this.isReady) return;
+
+      var $doc = $(document), $win = $(window);
+
+      var loadDimensions = function() {
+        Parallax.winHeight = $win.height();
+        Parallax.winWidth  = $win.width();
+        Parallax.docHeight = $doc.height();
+        Parallax.docWidth  = $doc.width();
+      };
+
+      var loadScrollPosition = function() {
+        var winScrollTop  = $win.scrollTop();
+        var scrollTopMax  = Parallax.docHeight - Parallax.winHeight;
+        var scrollLeftMax = Parallax.docWidth  - Parallax.winWidth;
+        Parallax.scrollTop  = Math.max(0, Math.min(scrollTopMax,  winScrollTop));
+        Parallax.scrollLeft = Math.max(0, Math.min(scrollLeftMax, $win.scrollLeft()));
+        Parallax.overScroll = Math.max(winScrollTop - scrollTopMax, Math.min(winScrollTop, 0));
+      };
+
+      $win.on('resize.px.parallax load.px.parallax', function() {
+          loadDimensions();
+          Parallax.isFresh = false;
+          Parallax.requestRender();
+        })
+        .on('scroll.px.parallax load.px.parallax', function() {
+          loadScrollPosition();
+          Parallax.requestRender();
+        });
+
+      loadDimensions();
+      loadScrollPosition();
+
+      this.isReady = true;
+    },
+
+    configure: function(options) {
+      if (typeof options == 'object') {
+        delete options.refresh;
+        delete options.render;
+        $.extend(this.prototype, options);
+      }
+    },
+
+    refresh: function() {
+      $.each(this.sliders, function(){ this.refresh() });
+      this.isFresh = true;
+    },
+
+    render: function() {
+      this.isFresh || this.refresh();
+      $.each(this.sliders, function(){ this.render() });
+    },
+
+    requestRender: function() {
+      var self = this;
+
+      if (!this.isBusy) {
+        this.isBusy = true;
+        window.requestAnimationFrame(function() {
+          self.render();
+          self.isBusy = false;
+        });
+      }
+    },
+    destroy: function(el){
+      var i,
+          parallaxElement = $(el).data('px.parallax');
+      parallaxElement.$mirror.remove();
+      for(i=0; i < this.sliders.length; i+=1){
+        if(this.sliders[i] == parallaxElement){
+          this.sliders.splice(i, 1);
+        }
+      }
+      $(el).data('px.parallax', false);
+      if(this.sliders.length === 0){
+        $(window).off('scroll.px.parallax resize.px.parallax load.px.parallax');
+        this.isReady = false;
+        Parallax.isSetup = false;
+      }
+    }
+  });
+
+
+  // Parallax Plugin Definition
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this = $(this);
+      var options = typeof option == 'object' && option;
+
+      if (this == window || this == document || $this.is('body')) {
+        Parallax.configure(options);
+      }
+      else if (!$this.data('px.parallax')) {
+        options = $.extend({}, $this.data(), options);
+        $this.data('px.parallax', new Parallax(this, options));
+      }
+      else if (typeof option == 'object')
+      {
+        $.extend($this.data('px.parallax'), options);
+      }
+      if (typeof option == 'string') {
+        if(option == 'destroy'){
+            Parallax['destroy'](this);
+        }else{
+          Parallax[option]();
+        }
+      }
+    })
+  };
+
+  var old = $.fn.parallax;
+
+  $.fn.parallax             = Plugin;
+  $.fn.parallax.Constructor = Parallax;
+
+
+  // Parallax No Conflict
+
+  $.fn.parallax.noConflict = function () {
+    $.fn.parallax = old;
+    return this;
+  };
+
+
+  // Parallax Data-API
+
+  $(document).on('ready.px.parallax.data-api', function () {
+    $('[data-parallax="scroll"]').parallax();
+  });
+
+}(jQuery, window, document));
+
 var menuClick = 0;
 $(function() {
 
@@ -38517,7 +38605,9 @@ $(function() {
 
     
     /*----------  SVG  ----------*/
+    /*
     if ($("#svg1").attr('id')) {
+        
         myVivus = new Vivus('svg1', {
             duration: 50
 
@@ -38527,7 +38617,9 @@ $(function() {
             //myVivus = new Vivus('my-svg-id',{duration: 200});
             // myVivus.play(1);
         }
+        
     }
+    */
      /*----------  SVG  ----------*/
 
 
@@ -38542,7 +38634,7 @@ $(function() {
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        parallax: true,
+        parallax: false,
         autoplay: 2000,
         loop: true,
         speed: 600
@@ -38557,24 +38649,17 @@ $(function() {
     var controller = new ScrollMagic.Controller();
 
     /*----------  ScrollMagic FX  ----------*/
-     if (!isMobile.any()) {
-      
+    var medida = $(window).width();
+     if (!isMobile.any() && medida > 1020) {
         /*----------  Menu pegajoso para escritorio ----------*/     
-        var scene = new ScrollMagic.Scene( )
-                   // .setPin("#menu-sticky")
-                    //.addIndicators({name: "Menú"}) // add indicators (requires plugin)
-                    .addTo(controller);
-       /*----------  Sombra del menu  ----------*/
-        var scene2 = new ScrollMagic.Scene({offset: 100})
-                    //.addIndicators({name: "debugger"}) // add indicators (requires plugin)
-                    .addTo(controller);
+        var scene2 = new ScrollMagic.Scene({offset: 0})
+        .setPin("#menu-sticky")
+        .addTo(controller);
         scene2.on("enter", function (event) {
-            //console.log("Scene entered.");
-            $("#sombra-emulada").css('opacity',1);
+        $("#sombra-emulada").css('opacity',1);
         });
         scene2.on("leave", function (event) {
-            //console.log("Scene left." +event.state);
-           $("#sombra-emulada").css('opacity',0);
+        $("#sombra-emulada").css('opacity',0);
         });
     }
 
@@ -38639,7 +38724,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 
    /*----------  Animación SVG ----------*/
-
+/*
     var scene3 = new ScrollMagic.Scene({triggerHook:0.7, triggerElement: "#trigger1", duration: 350})
                 //.addIndicators({name: "svg"}) // add indicators (requires plugin)
                 //.setClassToggle("#sec1", "activo")
@@ -38649,7 +38734,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         //console.log("Scene: " +event.state);
         //console.log("scrollDirection: " +event.scrollDirection);
              if(event.state=='BEFORE'){
-                myVivus.play(-1);
+                //myVivus.play(-1);
                // subraya("sec1");
             }
         
@@ -38658,13 +38743,14 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
         scene3.on("enter", function (event) {
         //console.log("Scene entered.");
-            myVivus.play();
+            //myVivus.play();
             //subraya("sec2");
         });
 
         if(isMobile.any()){
               scene3.triggerHook(0.6);
         }
+        */
       
 
 
@@ -38691,7 +38777,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 
      
-       var myIcons = new SVGMorpheus('#svg1-icon');
+       //var myIcons = new SVGMorpheus('#svg1-icon');
       //  myIcons.to('svg1-menu', {duration: 3000});
         
        
@@ -38699,10 +38785,10 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         $('#menu-movil-click').on('click touch', function(event) {
             if(menuClick==0){
                 menuClick=1;
-                myIcons.to('svg1-menu-cerrar', {duration: 300});
+               // myIcons.to('svg1-menu-cerrar', {duration: 300});
             }else{
                 menuClick=0;
-                 myIcons.to('svg1-menu', {duration: 300});
+                 //myIcons.to('svg1-menu', {duration: 300});
             }
           
         });
@@ -38721,19 +38807,19 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
     if(!isMobile.any()){
 
         /*----------  Si no es un móvil, si es escritorio ----------*/
+        /*
 
-
-        var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        var controllerParallax = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
         var es_1 =  new ScrollMagic.Scene({triggerElement: "#parallax1"})
-                        .setTween("#parallax1 > div", {y: "70%", ease: Linear.easeNone})
+                        .setTween($(".imagenParallax"), {y: "80%", ease: Linear.easeNone})
                         //.addIndicators({name: "home parallax 1"})
-                          .setClassToggle("#sec2", "activo")
-                        .addTo(controller_p1);
+                        //  .setClassToggle("#sec2", "activo")
+                        .addTo(controllerParallax);
+
+    
 
 
-
-
-
+/*
         var controller_p2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "240%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "50%",ease: Linear.easeNone})
@@ -38779,7 +38865,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         //.addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
-
+*/
                         /*
 
               var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "150%"}});
@@ -38791,6 +38877,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
                         */
 
     }else{
+        /*
 
          var controller_p1 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
@@ -38840,7 +38927,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
                        // .setTween("#parallax4", {x:"0%", ease: Linear.easeNone})
                         //.addIndicators({name: "home parallax 7"})
                         .addTo(controller_p7);
-
+/*
                         /*
 
          var controller_p8 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
@@ -38869,6 +38956,40 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
         }
 
 
+
+
+
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 500}});
+
+    // build scenes
+    new ScrollMagic.Scene({triggerElement: "#bloque-home"})
+                    .setClassToggle("#sec1", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#bloque-nosotros"})
+                    .setClassToggle("#sec2", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#bloque-membresias"})
+                    .setClassToggle("#sec3", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#sec-menu"})
+                    .setClassToggle("#sec4", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec-servicios"})
+                    .setClassToggle("#sec5", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#sec-citas"})
+                    .setClassToggle("#sec6", "activo") // add class toggle
+                   // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+
+
+
+  
     /*----------  Foundation  ----------*/
     $(document).foundation();
 
@@ -38890,26 +39011,7 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 /*----------  Funciones globales  ----------*/
 
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
+
 
 function updateBox (e) {
     if (e.type == "enter") {

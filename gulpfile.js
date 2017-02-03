@@ -35,13 +35,14 @@ var jsFiles = ['vendor/jquery.js',
                 'vendor/what-input.js',
                 'vendor/foundation.js',
                 'swiper.js',
-                'vivus.min.js',
+                //'vivus.min.js',
                 'TweenMax.js',
                 'ScrollMagic.js',
                 'plugins/debug.addIndicators.js',
-                'plugins/animation.gsap.js',
-                'plugins/DrawSVGPlugin.min.js',
+                //'plugins/animation.gsap.js',
+                //'plugins/DrawSVGPlugin.min.js',
                 'foundation-datepicker.js',
+                'parallax.js',
                 'app.js'];
 
 /*----------  Incluir scripts  ----------*/
@@ -97,7 +98,7 @@ gulp.task('js', ()=>{
 
 /*----------  Vigilar JS, CSS Y SASS  ----------*/
 gulp.task('watch', () => {
-	gulp.watch([public+'css/**/*.css',scss+'**/*.scss'],['concatcss']);
+	gulp.watch([public+'css/**/*.css',scss+'**/*.scss',scss+'/includes/*.scss'],['concatcss']);
   gulp.watch(sjss+'**/*.js',['js']);
   //gulp.watch([public+'css/bundle.css',public+'js/bundle.js'],['bundleAll']);
 });

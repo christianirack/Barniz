@@ -22,16 +22,59 @@ html, body {
   padding: 0px;
   border: 0px; }
 
+.bold {
+  font-weight: bold !important; }
+
+.hr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+  height: 2px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+.naranja {
+  color: #c76f00 !important; }
+
+.negro {
+  color: #000000 !important; }
+
+.marron {
+  color: #691413 !important; }
+
+.gris {
+  color: rgba(0, 0, 0, 0.7) !important; }
+
+.submenu {
+  position: relative;
+  z-index: 999964;
+  width: 100%; }
+
+.submenu2 {
+  position: relative;
+  z-index: 999965;
+  width: 100%; }
+
+.row-center {
+  margin: 0px auto !important; }
+
 .button {
-  background-color: #db7d0a !important;
-  color: white !important; }
+  background-color: #c76f00 !important;
+  color: #ffffff !important; }
+
+.morado {
+  background-color: #161b29 !important;
+  color: #ffffff !important;
+  padding: 20px; }
+
+.morado h1, .morado h2, .morado h3, .morado label {
+  color: #ffffff !important; }
 
 .input-group-button {
   text-align: left !important; }
 
 .datepicker-close {
   padding: 10px !important;
-  color: #db7d0a !important; }
+  color: #c76f00 !important; }
   .datepicker-close a {
     font-size: 2.5 em !important; }
 
@@ -72,7 +115,7 @@ html, body {
   left: 34%; }
 
 .mascara3 {
-  background-color: white;
+  background-color: #ffffff;
   left: 68%; }
 
 .mascara {
@@ -98,23 +141,20 @@ html, body {
 
 h1 {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 3em;
-  color: rgba(21, 26, 40, 0.9); }
+  font-size: 3em; }
 
 h2 {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 2em;
-  color: rgba(21, 26, 40, 0.9); }
+  font-size: 2em; }
 
 h3 {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 1.5em;
-  color: rgba(21, 26, 40, 0.9); }
+  font-size: 1.5em; }
 
 .menu-texto {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.5em;
-  color: rgba(21, 26, 40, 0.9); }
+  color: #161b29; }
   .menu-texto a {
     color: inherit; }
 
@@ -123,7 +163,7 @@ h3 {
 
 .texto-banner {
   font-family: 'Julius Sans One', sans-serif;
-  color: white;
+  color: #ffffff;
   font-weight: lighter;
   margin: 0px auto;
   text-align: center; }
@@ -155,7 +195,7 @@ h3 {
   margin: 0px auto;
   padding: 0px;
   border: 0px;
-  background-color: white;
+  background-color: #ffffff;
   padding-right: 50px;
   padding-left: 50px; }
 
@@ -171,6 +211,14 @@ h3 {
   position: relative;
   z-index: 99998 !important; }
 
+.activo {
+  border-bottom: 2px solid #c76f00 !important; }
+
+.menu-texto {
+  border-bottom: 2px solid #ffffff;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+
 #svg1-icon g path {
   stroke: none;
   fill: #E8AA5C; }
@@ -179,14 +227,27 @@ h3 {
   min-width: 150px;
   width: 5%; }
 
+.menu1 * {
+  color: #c76f00; }
+
+.menu2 * {
+  color: #000000; }
+
+.menu3 * {
+  color: #691413; }
+
 /*----------  Parallax [ 1 ] ----------*/
+._parallax1 {
+  height: 600px !important;
+  background: transparent; }
+
 #parallax1 {
   width: 100%;
   height: 750px;
   z-index: 99918 !important; }
 
 #parallax1-img {
-  background-size: 100% auto; }
+  height: 100vh; }
 
 .parallaxParent {
   height: 100vh; }
@@ -197,7 +258,7 @@ h3 {
 .parallaxParent > * {
   height: 200%;
   position: relative;
-  top: -100%; }
+  top: 0%; }
 
 /*----------  Parallax [ 2 ]  ----------*/
 #parallax2 {
@@ -226,14 +287,14 @@ h3 {
   width: 50%;
   left: 25%;
   height: 300px;
-  background-color: rgba(21, 26, 40, 0.85);
+  background-color: rgba(22, 27, 41, 0.8);
   position: absolute;
   top: 0px; }
   .cuadro-liquido h1, .cuadro-liquido h3 {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #ffffff; }
   .cuadro-liquido .home-liquido-subtitulo {
     padding-bottom: 20px;
-    border-bottom: 2px solid #db7d0a; }
+    border-bottom: 2px solid #c76f00; }
   .cuadro-liquido .home-menu-subtitulo {
     padding-bottom: 20px; }
 
@@ -241,11 +302,11 @@ h3 {
   width: 50%;
   left: 25%;
   height: 300px;
-  background-color: rgba(219, 125, 10, 0.8);
+  background-color: rgba(199, 111, 0, 0.8);
   position: absolute;
   top: 0px; }
   .cuadro-liquido2 h1, .cuadro-liquido2 h3 {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #ffffff; }
 
 /*----------  Parallax [ 3 ]  ----------*/
 #parallax3 {
@@ -258,7 +319,7 @@ h3 {
 
 .boton {
   padding: 10px;
-  background-color: white; }
+  background-color: #ffffff; }
 
 /*----------  Parallax [ 4 ]  ----------*/
 #parallax4 {
@@ -296,14 +357,14 @@ h3 {
   width: 50%;
   left: 25%;
   height: 300px;
-  background-color: rgba(103, 20, 19, 0.8);
+  background-color: rgba(105, 20, 19, 0.8);
   position: absolute;
   top: 0px; }
   .cuadro-liquido6 h1, .cuadro-liquido6 h3 {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #ffffff; }
   .cuadro-liquido6 .home-liquido-subtitulo {
     padding-bottom: 20px;
-    border-bottom: 2px solid #db7d0a; }
+    border-bottom: 2px solid #c76f00; }
   .cuadro-liquido6 .home-menu-subtitulo {
     padding-bottom: 20px; }
 
@@ -336,23 +397,23 @@ h3 {
   position: absolute;
   top: 0px; }
   .cuadro-liquido8 h1, .cuadro-liquido8 h3 {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #ffffff; }
   .cuadro-liquido8 .home-liquido-subtitulo {
     padding-bottom: 20px;
-    border-bottom: 2px solid #db7d0a; }
+    border-bottom: 2px solid #c76f00; }
   .cuadro-liquido8 .home-menu-subtitulo {
     padding-bottom: 20px; }
   .cuadro-liquido8 .cuadro-centrado {
-    color: white;
+    color: #ffffff;
     width: 100%;
     padding: 20px;
     max-width: 1000px;
-    background-color: rgba(21, 26, 40, 0.85);
+    background-color: rgba(22, 27, 41, 0.8);
     margin: 0px auto; }
   .cuadro-liquido8 .cuadro-centrado * {
-    color: white; }
+    color: #ffffff; }
   .cuadro-liquido8 .citas {
-    border-right: 1px solid #db7d0a;
+    border-right: 1px solid #c76f00;
     padding-right: 20px; }
   .cuadro-liquido8 .contacto {
     padding-left: 20px; }
@@ -505,7 +566,7 @@ h3 {
     left: 0px;
     top: 0px;
     z-index: 999772954;
-    background-color: white; }
+    background-color: #ffffff; }
   #svg-logo2 {
     width: 20%;
     position: absolute;
@@ -514,4 +575,28 @@ h3 {
     opacity: 1; } }
 
 .footer {
-  background-color: #e3e3e3; }
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative !important; }
+
+.redessociales {
+  padding: 20px; }
+
+.redessociales img {
+  width: 40px; }
+
+.h3-servicios {
+  margin-left: 20px !important; }
+
+.servicios-menu h2 {
+  padding-bottom: 20px !important; }
+
+.contacto-morado {
+  background-color: rgba(22, 27, 41, 0.8) !important;
+  padding: 20px; }
+
+.contacto-morado * {
+  color: #ffffff; }
+
+.fondo-contacto {
+  background: url(../images/home-vino.png) no-repeat right top;
+  background-size: auto 100%; }
