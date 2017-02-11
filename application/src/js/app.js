@@ -40,9 +40,9 @@ $(function() {
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        parallax: false,
+        //parallax: false,
         autoplay: 2000,
-        loop: true,
+       // loop: true,
         speed: 600
     });
 
@@ -397,6 +397,37 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
   
     /*----------  Foundation  ----------*/
+    $('#menu-movil-click').on("click touch", function(event){
+        if($('#svg1-menu').is(':visible')){
+            $('.menu-movil-desplegado').show();
+            $('#svg1-menu-cerrar').show();
+            $('#svg1-menu').hide();  
+        }else{
+            $('.menu-movil-desplegado').hide();
+            $('#svg1-menu-cerrar').hide();
+            $('#svg1-menu').show();
+        }
+        
+    })
+    $('.opcion').on("click touch", function(event){
+        var ir = $(this).attr('ir');
+      // animacionesHome();
+        //alert(ir);
+       //alert('#'+ir);
+        $('html, body, #vbody').animate({
+                    scrollTop: $('#'+ir).offset().top-200
+        }, timeScroll);
+
+        $('.menu-movil-desplegado').hide();
+            $('#svg1-menu-cerrar').hide();
+            $('#svg1-menu').show();
+            event.preventDefault();
+        
+    })
+
+
+
+
     $(document).foundation();
 
     var timeScroll = 800;

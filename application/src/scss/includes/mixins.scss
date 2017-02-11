@@ -79,8 +79,24 @@
 	}
 	
 	.parallax-bg{
-		background:url(../m.images/home-banner.jpg);
+		//background:url(../m.images/home-banner.jpg);
 	}
+	.homebanner1{
+		background:url('../m.images/banner1.jpg?c=1') no-repeat top center;
+		background-size: 100% auto;
+		
+	}
+	.homebanner2{
+		background:url('../m.images/banner2.jpg?c=1') no-repeat top center;
+		background-size: 100% auto;
+		
+	}
+	.homebanner3{
+		background:url('../m.images/banner3.jpg?c=1') no-repeat top center;
+		background-size: 100% auto;
+		
+	}
+
 
 }
 
@@ -109,10 +125,25 @@
 		background: url(../images/home-amigas.jpg?c=2) no-repeat center center;
 	}
 	.parallax-bg{
-		background:url(../images/home-banner.jpg);
+		//background:url(../images/home-banner.jpg);
 	}
 	#parallax8-img{
 		background: url(../images/home-vino.png?c=3) no-repeat center center;
+	}
+	.homebanner1{
+		background:url('../images/banner1.jpg?c=1') no-repeat top center;
+		background-size: 100% auto;
+		
+	}
+	.homebanner2{
+		background:url('../images/banner2.jpg?c=1') no-repeat top center;
+		background-size: 100% auto;
+		
+	}
+	.homebanner3{
+		background:url('../images/banner3.jpg?c=1') no-repeat top center;
+		background-size: 100% auto;
+		
 	}
 }
 
