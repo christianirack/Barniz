@@ -38631,13 +38631,13 @@ $(function() {
     /*----------  Slider home con Swiper  ----------*/
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+         paginationClickable: true,
         //parallax: false,
-        autoplay: 2000,
-       // loop: true,
-        speed: 600
+        autoplay: 1500,
+        slidesPerView: 1,
+         loop: true
     });
 
 

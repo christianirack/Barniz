@@ -51,28 +51,28 @@
 
 
 	#parallax1-img{
-		background: url(../m.images/home-mujer.jpg?c=2) no-repeat center center;
+		background: url(../m.images/home-mujer.jpg?c=3) no-repeat center center;
 	
 	}
 	#parallax2-img{
-		background: url(../m.images/home-liquido.png?c=2) no-repeat center center;
+		background: url(../m.images/home-liquido.png?c=3) no-repeat center center;
 	}
 	#parallax3-img{
-		background: url(../m.images/home-cafe.jpg?c=2) no-repeat center center;
+		background: url(../m.images/home-cafe.jpg?c=3) no-repeat center center;
 	
 	}
 	#parallax4-img{
-		background: url(../m.images/home-bebidas.png?c=2) no-repeat center center;
+		background: url(../m.images/home-bebidas.png?c=3) no-repeat center center;
 	
 	}
 	#parallax5-img{
-		background: url(../m.images/home-unas.jpg?c=2) no-repeat center center;
+		background: url(../m.images/home-unas.jpg?c=3) no-repeat center center;
 	}
 	#parallax6-img{
-		background: url(../m.images/home-maquillaje.png?c=2) no-repeat center center;
+		background: url(../m.images/home-maquillaje.png?c=3) no-repeat center center;
 	}
 	#parallax7-img{
-		background: url(../m.images/home-amigas.jpg?c=2) no-repeat center center;
+		background: url(../m.images/home-amigas.jpg?c=3) no-repeat center center;
 	}
 	#parallax8-img{
 		background: url(../m.images/home-vino.png?c=3) no-repeat center center;
@@ -82,17 +82,17 @@
 		//background:url(../m.images/home-banner.jpg);
 	}
 	.homebanner1{
-		background:url('../m.images/banner1.jpg?c=1') no-repeat top center;
+		background:url('../m.images/banner1.jpg?c=3') no-repeat top center;
 		background-size: 100% auto;
 		
 	}
 	.homebanner2{
-		background:url('../m.images/banner2.jpg?c=1') no-repeat top center;
+		background:url('../m.images/banner2.jpg?c=3') no-repeat top center;
 		background-size: 100% auto;
 		
 	}
 	.homebanner3{
-		background:url('../m.images/banner3.jpg?c=1') no-repeat top center;
+		background:url('../m.images/banner3.jpg?c=3') no-repeat top center;
 		background-size: 100% auto;
 		
 	}
@@ -102,27 +102,27 @@
 
 @mixin parallaxMedium{
 	#parallax1-img{
-		background: url(../images/home-mujer.jpg?c=2) no-repeat center center;
+		background: url(../images/home-mujer.jpg?c=3) no-repeat center center;
 	
 	}
 	#parallax2-img{
-		background: url(../images/home-liquido.png?c=2) no-repeat center center;
+		background: url(../images/home-liquido.png?c=3) no-repeat center center;
 	}
 	#parallax3-img{
-		background: url(../images/home-cafe.jpg?c=2) no-repeat center center;
+		background: url(../images/home-cafe.jpg?c=3) no-repeat center center;
 	
 	}
 	#parallax4-img{
-		background: url(../images/home-bebidas.png?c=2) no-repeat center center;
+		background: url(../images/home-bebidas.png?c=3) no-repeat center center;
 	}
 	#parallax5-img{
-		background: url(../images/home-unas.jpg?c=2) no-repeat center center;
+		background: url(../images/home-unas.jpg?c=3) no-repeat center center;
 	}
 	#parallax6-img{
-		background: url(../images/home-maquillaje.png?c=2) no-repeat center center;
+		background: url(../images/home-maquillaje.png?c=3) no-repeat center center;
 	}
 	#parallax7-img{
-		background: url(../images/home-amigas.jpg?c=2) no-repeat center center;
+		background: url(../images/home-amigas.jpg?c=3) no-repeat center center;
 	}
 	.parallax-bg{
 		//background:url(../images/home-banner.jpg);
@@ -131,17 +131,17 @@
 		background: url(../images/home-vino.png?c=3) no-repeat center center;
 	}
 	.homebanner1{
-		background:url('../images/banner1.jpg?c=1') no-repeat top center;
+		background:url('../images/banner1.jpg?c=3') no-repeat top center;
 		background-size: 100% auto;
 		
 	}
 	.homebanner2{
-		background:url('../images/banner2.jpg?c=1') no-repeat top center;
+		background:url('../images/banner2.jpg?c=3') no-repeat top center;
 		background-size: 100% auto;
 		
 	}
 	.homebanner3{
-		background:url('../images/banner3.jpg?c=1') no-repeat top center;
+		background:url('../images/banner3.jpg?c=3') no-repeat top center;
 		background-size: 100% auto;
 		
 	}
