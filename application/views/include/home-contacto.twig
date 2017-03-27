@@ -8,20 +8,35 @@
 	<div class="small-12">
 						{#  ------------------------ #}
 						<div class="row " id="sec-citas">
-							<div class="columns small-12 medium-6 citas ">
+
+
+
+							<div class="columns small-12 citas  enviado ">
+									<div class="separador2"></div>
+									<h1>¡Gracias!</h1>
+									<div class="separador2"></div>
+									<h3>Tu mensaje ha sido enviado y en breve nos pondremos en contacto contigo.</h3>
+									<div class="separador2"></div>
+
+							</div>
+
+
+
+
+							<div class="columns small-12 medium-6 citas forma">
 									<h1>CITAS</h1>
 
  									<label>NOMBRE
 										<div class="input-group">
 											
-											 <input class="input-group-field" type="text">
+											 <input class="input-group-field" type="text" id="frmNombre">
 											  <span class="input-group-label"><img src="public/images/icono-form-1.png"></span> 
 
 										</div>
 									</label>
 									<label>CORREO
 										<div class="input-group">
-										 <input class="input-group-field" type="email">
+										 <input class="input-group-field" type="email" id="frmCorreo">
 										  <span class="input-group-label"><img src="public/images/icono-form-1.png"></span> 
 										</div>
 									</label>
@@ -33,28 +48,27 @@
 									</label>
 									<label>HORA
 										<div class="input-group">
-										 <input class="input-group-field" type="time">
+										 <input class="input-group-field" type="time" id="frmHora">
 										  <span class="input-group-label"><img src="public/images/icono-form-3.png"></span> 
 										</div>
 									</label>
 									<label>MENSAJE
 										<div class="input-group">
-										 <textarea class="input-group-field" ></textarea>
+										 <textarea class="input-group-field" id="frmMensaje"></textarea>
 										  <span class="input-group-label"><img src="public/images/icono-form-4.png"></span> 
 										</div>
 									</label>
 
 
 										<div class="input-group-button">
-										 <input type="submit" class="button show-for-small-only large" value="ENVIAR">
-									    <input type="submit" class="button show-for-medium" value="ENVIAR">
+										 <input type="submit" class="button show-for-small-only large enviarForma1" value="ENVIAR">
+									    	<input type="submit" class="button show-for-medium enviarForma1" value="ENVIAR">
 									  </div>
 
 
 							</div>
 							<div class="separador2 show-for-small-only"></div>
-
-							<div class="columns small-12 medium-6 contacto">
+							<div class="columns small-12 medium-6 contacto forma">
 										<div class="row">
 											<div class="columns small-12 text-center"><img src="public/images/contacto.png" alt=""></div>
 										</div>
@@ -63,14 +77,16 @@
 											<div class="columns small-12 medium-6">
 												<h3>Días y Horarios</h3>
 												<div class="texto">
-													Martes a Sabado / 8:30am – 9pm<br>
-													Domingo / 8:30am – 5pm<p class="show-for-small-only" /></p>
+													Martes a Sábado <br />8:30am – 9pm<br>
+													Domingo<br />8:30am – 5pm<p class="show-for-small-only" /></p>
 												</div>
 											</div>
+
+											<div class="separador  hide-for-small-only"></div>
 											<div class="columns small-12 medium-6">
 												<h3>Teléfono</h3>
 												<div class="texto">
-													(55) xxxx xxxx xxx<p class="show-for-small-only" /></p>
+													+(52) 55 7826 5100 / 5111<p class="show-for-small-only" /></p>
 												</div>
 											</div>
 											<div class="separador show-for-medium-only"></div>
@@ -78,20 +94,23 @@
 											<div class="columns small-12 medium-6">
 												<h3>Dirección</h3>
 												<div class="texto">
-														Avenida Moliere 63,  Polanco, 11550<p class="show-for-small-only" /></p>
+														Avenida Moliere 63,  Polanco, 11550, México D.F.<p class="show-for-small-only" /></p>
 												</div>
 
 											</div>
 											<div class="columns small-12 medium-6">
 												<h3>Correo</h3>
 												<div class="texto">
-													hola@barnizbar.com.mx<p class="show-for-small-only" /></p>
+													<a href="mailto:hola@barnizbar.com.mx">hola@barnizbar.com.mx</a><p class="show-for-small-only" /></p>
 												</div>
 											</div>
 											
 										</div>
-										<div class="separador"></div>
-										<div class="row">
+										<!--
+										
+										<div class="separador forma"></div>
+										
+										<div class="row forma">
 											<div class="columns small-12 text-left">
 												<label>MENSAJE
 													<div class="input-group">
@@ -100,8 +119,8 @@
 													</div>
 												</label>
 												<div class="input-group-button">
-													 <input type="submit" class="button show-for-small-only large" value="ENVIAR">
-												    <input type="submit" class="button show-for-medium" value="ENVIAR">
+													 <input type="submit" class="button show-for-small-only large enviarForma2" value="ENVIAR">
+												    <input type="submit" class="button show-for-medium enviarForma2" value="ENVIAR">
 												    <div class="separador2 debug show-for-small-only"></div>
 												  </div>
 
@@ -109,6 +128,7 @@
 
 
 										</div>
+										-->
 											
 							</div>
 						</div>

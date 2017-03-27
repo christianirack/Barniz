@@ -7530,6 +7530,10 @@ body {
   font-size: 1.2em;
 }
 
+a {
+  color: #c76f00 !important;
+}
+
 /*----------  Target animados  ----------*/
 
 .mascara1 {
@@ -8297,4 +8301,12 @@ svg g path {
 .fondo-contacto {
   background: url("../images/home-vino.png") no-repeat right top;
   background-size: auto 100%;
+}
+
+.input-group-field {
+  color: black !important;
+}
+
+.enviado {
+  display: none;
 }

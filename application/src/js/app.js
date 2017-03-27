@@ -427,6 +427,32 @@ var tweenMenu = TweenMax.fromTo("#parallax8", 2, {x: "10%"}, {x: "0%"});
 
 
 
+    $(".enviarForma2").on("click touch", function(e){
+            alert(2);
+            $(".forma").hide();
+    });
+    $(".enviarForma1").on("click touch", function(e){
+        if($("#frmNombre").val()!='' && $("#frmCorreo").val()!=''){
+             var nombre = $("#frmNombre").val();
+             var correo = $("#frmCorreo").val();
+             var fecha = $("#dp1").val();
+             var hora = $("#frmHora").val();
+             var mensaje = $("#frmMensaje").val();
+             $.post( "public/correo.php", { nombre: nombre, correo: correo, fecha:fecha, hora:hora, mensaje:mensaje })
+              .done(function( data ) {
+                //alert( "Data Loaded: " + data );
+              });
+              $(".forma").hide();
+              $(".enviado").show();
+        }else{
+            alert('Llena correctamente los campos requeridos.');
+        }
+    });
+
+
+
+$('.sec2-back').parallax({imageSrc: 'img/back-description.jpg'});
+
 
     $(document).foundation();
 
